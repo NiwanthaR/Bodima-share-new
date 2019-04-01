@@ -1,0 +1,51 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="650dp"
+    tools:context=".Map_Dash"
+    android:layout_alignParentBottom="true"
+    />
+
+    <Button
+        android:id="@+id/btnsetLocation"
+        android:layout_width="165dp"
+        android:layout_height="38dp"
+        android:layout_above="@+id/map"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="230dp"
+        android:layout_marginRight="230dp"
+        android:layout_marginBottom="23dp"
+        android:onClick="onClick"
+        android:text="Set My Location" />
+
+    <Button
+        android:id="@+id/btnset"
+        android:layout_width="142dp"
+        android:layout_height="41dp"
+        android:layout_above="@+id/map"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
+        android:layout_marginBottom="21dp"
+        android:onClick="onClick"
+        android:text="Set" />
+
+</RelativeLayout>

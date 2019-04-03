@@ -20,6 +20,7 @@ public class Forget_Dash extends AppCompatActivity {
     //varible declare
     private EditText forgetmail;
     private TextView gobacklogin;
+    private TextView gosignup;
     private Button sendverifymail;
     private TextView resetdisplay;
     private FirebaseAuth firebaseAuth;
@@ -40,6 +41,15 @@ public class Forget_Dash extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Forget_Dash.this,Login_Dash.class));
+            }
+        });
+
+
+        //click signup
+        gosignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Forget_Dash.this,Registration_Dash.class));
             }
         });
 
@@ -77,6 +87,7 @@ public class Forget_Dash extends AppCompatActivity {
     private void uiload(){
         forgetmail=(EditText)findViewById(R.id.etforgetmail);
         gobacklogin=(TextView)findViewById(R.id.tvgoLogin);
+        gosignup=(TextView)findViewById(R.id.btnSignup);
         sendverifymail=(Button)findViewById(R.id.btnsendveryfy);
         resetdisplay=(TextView)findViewById(R.id.tvresetdisplay);
         firebaseAuth =FirebaseAuth.getInstance();

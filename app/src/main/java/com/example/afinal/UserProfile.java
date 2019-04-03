@@ -2,41 +2,84 @@ package com.example.afinal;
 
 public class UserProfile {
 
-    public String userupname;
-    public String userupemai;
-    public String userupnic;
+    public String FirstName;
+    public String LastName;
+    public String City;
+    public String NIC;
+    public String DOB;
+    public String Contact;
+    public String Email;
+
 
     public UserProfile(){
 
     }
 
-    public UserProfile(String userupname, String userupemai, String userupnic) {
-        this.userupname = userupname;
-        this.userupemai = userupemai;
-        this.userupnic = userupnic;
+
+
+    public UserProfile(String firstName, String lastName, String city,String NIC, String DOB, String contact, String email) {
+        this.FirstName = firstName;
+        this.LastName = lastName;
+        this.City = city;
+        this.NIC = NIC;
+        this.DOB = DOB;
+        this.Contact = contact;
+        this.Email = email;
     }
 
-    public String getUserupname() {
-        return userupname;
+    public String getFirstName() {
+        return FirstName;
     }
 
-    public void setUserupname(String userupname) {
-        this.userupname = userupname;
+    public void setFirstName(String firstName) {
+        FirstName = firstName;
     }
 
-    public String getUserupemai() {
-        return userupemai;
+    public String getLastName() {
+        return LastName;
     }
 
-    public void setUserupemai(String userupemai) {
-        this.userupemai = userupemai;
+    public void setLastName(String lastName) {
+        LastName = lastName;
     }
 
-    public String getUserupnic() {
-        return userupnic;
+    public String getCity() {
+        return City;
     }
 
-    public void setUserupnic(String userupnic) {
-        this.userupnic = userupnic;
+    public void setCity(String city) {
+        City = city;
+    }
+
+    public String getNIC() {
+        return NIC;
+    }
+
+    public void setNIC(String NIC) {
+        this.NIC = NIC;
+    }
+
+    public String getDOB() {
+        return DOB;
+    }
+
+    public void setDOB(String DOB) {
+        this.DOB = DOB;
+    }
+
+    public String getContact() {
+        return Contact;
+    }
+
+    public void setContact(String contact) {
+        Contact = contact;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
     }
 }

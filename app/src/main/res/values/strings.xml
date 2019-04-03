@@ -8,7 +8,7 @@
     <string name="txtusername">Username</string>
     <string name="txtfirstname">First Name</string>
     <string name="txtlastname">Last Name</string>
-    <string name="txtaddress">Address</string>
+    <string name="txCity">City</string>
     <string name="txtnic">NIC</string>
     <string name="txtdob">DOB</string>
     <string name="txtgender">Gender</string>

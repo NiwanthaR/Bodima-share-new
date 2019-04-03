@@ -45,9 +45,9 @@ public class Profile_Dash extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-                ProfileName.setText(userProfile.getUserupname());
-                ProfileEmail.setText(userProfile.getUserupemai());
-                ProfileNIC.setText(userProfile.getUserupnic());
+//                ProfileName.setText(userProfile.getUserupname());
+//                ProfileEmail.setText(userProfile.getUserupemai());
+//                ProfileNIC.setText(userProfile.getUserupnic());
 
             }
 

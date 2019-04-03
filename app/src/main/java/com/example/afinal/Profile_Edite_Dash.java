@@ -42,9 +42,9 @@ public class Profile_Edite_Dash extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-                Edite_name.setText(userProfile.getUserupname());
-                Edite_email.setText(userProfile.getUserupemai());
-                Edite_nic.setText(userProfile.getUserupnic());
+//                Edite_name.setText(userProfile.getUserupname());
+//                Edite_email.setText(userProfile.getUserupemai());
+//                Edite_nic.setText(userProfile.getUserupnic());
 
             }
 
@@ -62,9 +62,9 @@ public class Profile_Edite_Dash extends AppCompatActivity {
                 String email = Edite_email.getText().toString();
                 String nic = Edite_email.getText().toString();
 
-                UserProfile userProfile = new UserProfile(name,email,nic);
+//                UserProfile userProfile = new UserProfile(name,email,nic);
 
-                databaseReference.setValue(userProfile);
+//                databaseReference.setValue(userProfile);
 
                 finish();
                 startActivity(new Intent(Profile_Edite_Dash.this,Profile_Dash.class));

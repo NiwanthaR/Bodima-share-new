@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,21 +26,22 @@ public class Registration_Dash extends AppCompatActivity {
 
     //variable declare
     private EditText Fname;
-    private EditText Email;
+    private EditText Lname;
+    private EditText City;
     private EditText NIC;
+    private EditText DOB;
+    private EditText Contact;
+    private EditText Email;
     private EditText Password;
     private EditText Repassword;
     private Button Submit;
 
-    private TextView displayfname;
-    private TextView displayemail;
-    private TextView displaynic;
-    private TextView displaypassword;
-    private TextView displayrepassword;
-    private TextView gobacklogin;
 
+
+    private TextView txtErrorDisplay;
+    private TextView gobacklogin;
     //validate
-    String pass , repass , nic, email, fname;
+    String  fname,lname,city,nic,dob,contact,email,password,repasswod;
 
     //function
     private Validetion validetion;
@@ -49,6 +52,9 @@ public class Registration_Dash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         //hide top panel
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -69,6 +75,9 @@ public class Registration_Dash extends AppCompatActivity {
                 startActivity(new Intent(Registration_Dash.this , Login_Dash.class));
             }
         });
+
+
+
 
 
         Submit.setOnClickListener(new View.OnClickListener() {
@@ -105,17 +114,17 @@ public class Registration_Dash extends AppCompatActivity {
 
     private void uiload()  {
         Fname=(EditText)findViewById(R.id.etfname);
-        Email=(EditText)findViewById(R.id.etemail);
+        Lname=(EditText)findViewById(R.id.etlname);
+        City=(EditText)findViewById(R.id.etCity);
         NIC=(EditText)findViewById(R.id.etnic);
+        DOB=(EditText)findViewById(R.id.txtdob);
+        Contact=(EditText)findViewById(R.id.etContactNum);
+        Email=(EditText)findViewById(R.id.etemail);
         Password=(EditText)findViewById(R.id.etpassword);
         Repassword=(EditText)findViewById(R.id.etrepassword);
         Submit=(Button)findViewById(R.id.btnsubmit);
 
-        displayfname=(TextView)findViewById(R.id.tvdissfname);
-        displayemail=(TextView)findViewById(R.id.tvdisemail);
-        displaynic=(TextView)findViewById(R.id.tvdissnic);
-        displaypassword=(TextView)findViewById(R.id.tvdisspassword);
-        displayrepassword=(TextView)findViewById(R.id.tvdissrepassword);
+        txtErrorDisplay=(TextView)findViewById(R.id.txtErrorDisplay);
         gobacklogin=(TextView)findViewById(R.id.tvgobackloginreg);
     }
 
@@ -124,57 +133,59 @@ public class Registration_Dash extends AppCompatActivity {
         final Validetion validate = new Validetion();
         boolean result = false;
 
-        pass = Password.getText().toString();
-        repass = Repassword.getText().toString();
-        nic = NIC.getText().toString();
         fname = Fname.getText().toString();
+        lname = Lname.getText().toString();
+        city = City.getText().toString();
+        nic = NIC.getText().toString();
+        dob = DOB.getText().toString();
+        contact = Contact.getText().toString();
         email = Email.getText().toString();
+        password = Password.getText().toString();
+        repasswod = Repassword.getText().toString();
 
-        displayfname.setText(null);
-        displayemail.setText(null);
-        displaynic.setText(null);
-        displaypassword.setText(null);
-        displayrepassword.setText(null);
 
-        if(fname.isEmpty() || email.isEmpty() || nic.isEmpty() || pass.isEmpty() || repass.isEmpty())
+
+        txtErrorDisplay.setText(null);
+
+        if(fname.isEmpty() ||lname.isEmpty()|| email.isEmpty() || nic.isEmpty() || password.isEmpty() || repasswod.isEmpty())
         {
-            displayrepassword.setText("Fill All The Details....!!");
+            txtErrorDisplay.setText("Fill All The Details....!!");
         }
         else
         {
-            if(validate.isValidPassword(pass) && validate.isValidNic(nic) && validate.issame(pass,repass) && validate.isValidmail(email))
+            if(validate.isValidPassword(password) && validate.isValidNic(nic) && validate.issame(password,repasswod) && validate.isValidmail(email))
             {
                 //Toast.makeText(Registration_Dash.this,"Your Details Submitted..!!",Toast.LENGTH_SHORT).show();
                 result = true;
                 //firebase part
             }
-            else  if (validate.isValidNic(nic)==false && validate.isValidPassword(pass)==false)
+            else  if (validate.isValidNic(nic)==false && validate.isValidPassword(password)==false)
             {
-                displaynic.setText("You Want to Enter Real NIC number.");
-                displaypassword.setText("One capital letter , one Special Symbol & Numbers");
+                Email.setText("You Want to Enter Real NIC number.");
+                txtErrorDisplay.setText("One capital letter , one Special Symbol & Numbers");
                 //displayemail.setText("Enter Correct Email");
-                displayrepassword.setText("NIC and Password & Email Wrong Check Again..!!");
+                txtErrorDisplay.setText("NIC and Password & Email Wrong Check Again..!!");
 
             }
-            else if(validate.isValidPassword(pass)==false)
+            else if(validate.isValidPassword(password)==false)
             {
-                displayrepassword.setText("Request Failed Password is Wrong..!");
-                displaypassword.setText("One capital letter,one Special Symbol & Number");
+                txtErrorDisplay.setText("Request Failed Password is Wrong..!");
+                txtErrorDisplay.setText("One capital letter,one Special Symbol & Number");
             }
             else if (validate.isValidNic(nic)==false)
             {
-                displaynic.setText("You Want to Enter Real NIC number.");
-                displayrepassword.setText("Request Failed NIC is Wrong..!");
+                txtErrorDisplay.setText("You Want to Enter Real NIC number.");
+                txtErrorDisplay.setText("Request Failed NIC is Wrong..!");
             }
-            else if (validate.issame(pass,repass)==false)
+            else if (validate.issame(password,password)==false)
             {
-                displayrepassword.setText("Request Failed Password isn't Match..!");
-                displaypassword.setText("You want to Enter Same Password..!");
+                txtErrorDisplay.setText("Request Failed Password isn't Match..!");
+                txtErrorDisplay.setText("You want to Enter Same Password..!");
             }
             else if (validate.isValidmail(email)==false)
             {
-                displayemail.setText("Enter Correct Email..!");
-                displayrepassword.setText("Request Failed Email is Incorrect");
+                txtErrorDisplay.setText("Enter Correct Email..!");
+                txtErrorDisplay.setText("Request Failed Email is Incorrect");
             }
 
         }
@@ -210,7 +221,7 @@ public class Registration_Dash extends AppCompatActivity {
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myref = firebaseDatabase.getReference(firebaseAuth.getUid());
-        UserProfile userProfile = new UserProfile(fname,nic,email);
+        UserProfile userProfile = new UserProfile(fname,lname,city,nic,dob,contact,email);
         myref.setValue(userProfile);
 
     }

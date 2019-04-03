@@ -87,8 +87,11 @@
 
 
 
+
+
+
         <Button
-            android:id="@+id/btnLoginz"
+            android:id="@+id/btnsendveryfy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -99,6 +102,7 @@
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
             android:layout_marginTop="15dp" />
+
 
         <android.support.v4.widget.Space
             android:layout_width="wrap_content"
@@ -116,12 +120,12 @@
                 android:layout_weight="2"
                 android:layout_height="match_parent">
                 <Button
-                    android:id="@+id/btnForgotPassword"
+                    android:id="@+id/tvgoLogin"
                     android:gravity="left|center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/nobackgroundbtn"
-                    android:text="@string/ForgotYourPassword"
+                    android:text="@string/txtLogin"
                     android:textColor="@color/colorPrimary" />
             </LinearLayout>
 
@@ -142,81 +146,27 @@
 
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvresetdisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWarning"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            />
+
     </LinearLayout>
 
 
 
 
-    <EditText
-        android:id="@+id/etforgetmail"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Email Address"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.105" />
 
-    <Button
-        android:id="@+id/btnsendveryfy"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Send Verify Mail"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etforgetmail"
-        app:layout_constraintVertical_bias="0.259" />
 
-    <TextView
-        android:id="@+id/tvgoLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Back Safe Login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnsendveryfy"
-        app:layout_constraintVertical_bias="0.194" />
 
-    <TextView
-        android:id="@+id/tvresetdisplay"
-        android:layout_width="285dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:textAlignment="center"
-        android:textColor="#FF0000"
-        app:layout_constraintBottom_toTopOf="@+id/btnsendveryfy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etforgetmail" />
+
+
+
+
 </LinearLayout>

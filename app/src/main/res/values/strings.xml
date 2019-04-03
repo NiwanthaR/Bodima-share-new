@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">final</string>
     <string name="title_activity_map__dash">Map</string>
-    <string name="title_activity_map_viwe__dash">Map</string>
 
     <string name="btnSearch">SEARCH</string>
+    <string name="searchAdd">SEARCH ADD</string>
     <string name="btnPostAdd">POST ADD</string>
     <string name="txtusername">Username</string>
     <string name="txtfirstname">First Name</string>
@@ -25,18 +25,10 @@
     <string name="btnSignUp">Signup</string>
     <string name="btnLogin">Login</string>
     <string name="txtLogin">Login</string>
-    <string name="txtForfet">Login</string>
     <string name="txtHouse">House</string>
     <string name="txtStare">Stare</string>
     <string name="txtRoom">Room</string>
     <string name="GetVerificationLink">Get Verification Link</string>
-
-    <string name="title_activity_home">HomeActivity</string>
-
-    <string-array name="name">
-        <item>safsd</item>
-        <item>safsd</item>
-    </string-array>
 
 
 </resources>

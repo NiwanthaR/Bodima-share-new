@@ -1,5 +1,6 @@
 package com.example.afinal;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -21,6 +23,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Calendar;
 
 public class Registration_Dash extends AppCompatActivity {
 
@@ -38,6 +42,10 @@ public class Registration_Dash extends AppCompatActivity {
 
 
 
+    EditText testview;
+    Calendar calendar;
+    DatePickerDialog datePickerDialog;
+
     private TextView txtErrorDisplay;
     private TextView gobacklogin;
     //validate
@@ -54,7 +62,6 @@ public class Registration_Dash extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
 
-
         //hide top panel
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
@@ -67,6 +74,34 @@ public class Registration_Dash extends AppCompatActivity {
          final Validetion validate = new Validetion();
          //firebase
         firebaseAuth=FirebaseAuth.getInstance();
+
+
+        try {
+//
+        }catch (Exception i){
+            Toast.makeText(this, i.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+
+
+        testview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calendar=Calendar.getInstance();
+                int date=calendar.get(Calendar.DAY_OF_MONTH);
+                int month=calendar.get(Calendar.MONTH);
+                int year=calendar.get(Calendar.YEAR);
+                datePickerDialog=new DatePickerDialog(Registration_Dash.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        testview.setText(year + "/" + month + "/" + dayOfMonth);
+                    }
+                },year,month,date);
+                datePickerDialog.show();
+            }
+        });
+
+
+
 
 
         gobacklogin.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +135,7 @@ public class Registration_Dash extends AppCompatActivity {
                             }
                             else {
                                 Toast.makeText(Registration_Dash.this,"Registration Failed!",Toast.LENGTH_SHORT).show();
+                                System.out.println("Registration Failed!");
                             }
 
                         }
@@ -113,6 +149,7 @@ public class Registration_Dash extends AppCompatActivity {
     }
 
     private void uiload()  {
+        testview=(EditText) findViewById(R.id.txtdob);
         Fname=(EditText)findViewById(R.id.etfname);
         Lname=(EditText)findViewById(R.id.etlname);
         City=(EditText)findViewById(R.id.etCity);
@@ -220,9 +257,11 @@ public class Registration_Dash extends AppCompatActivity {
     public void sendUserData(){
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myref = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference myref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
         UserProfile userProfile = new UserProfile(fname,lname,city,nic,dob,contact,email);
+        System.out.println(fname);
         myref.setValue(userProfile);
+        System.out.println(lname);
 
     }
 

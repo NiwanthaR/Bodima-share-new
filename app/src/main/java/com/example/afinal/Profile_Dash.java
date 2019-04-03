@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Profile_Dash extends AppCompatActivity {
 
     private ImageView Profilepic;
-    private TextView ProfileName ,ProfileEmail , ProfileNIC;
+    private TextView name ,city , nic,dob,contact,email;
     private Button ProfileEdite;
 
     private FirebaseAuth firebaseAuth;
@@ -45,9 +45,12 @@ public class Profile_Dash extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-//                ProfileName.setText(userProfile.getUserupname());
-//                ProfileEmail.setText(userProfile.getUserupemai());
-//                ProfileNIC.setText(userProfile.getUserupnic());
+//                name.setText(userProfile.getFirstName()+" "+userProfile.getLastName());
+//                city.setText(userProfile.getCity());
+//               nic.setText(userProfile.getNIC());
+//                dob.setText(userProfile.getDOB());
+//                contact.setText(userProfile.getContact());
+//                email.setText(userProfile.getEmail());
 
             }
 
@@ -70,10 +73,13 @@ public class Profile_Dash extends AppCompatActivity {
     //assign
     private void uiload(){
 
-        Profilepic=(ImageView)findViewById(R.id.ivprofilepic);
-        ProfileName=(TextView)findViewById(R.id.tvprofilename);
-        ProfileEmail=(TextView)findViewById(R.id.tvprofileemail);
-        ProfileNIC=(TextView)findViewById(R.id.tvprofilenic);
+        name=(TextView)findViewById(R.id.name);
+        city=(TextView)findViewById(R.id.city);
+        nic=(TextView)findViewById(R.id.nic);
+        dob=(TextView)findViewById(R.id.dob);
+        contact=(TextView)findViewById(R.id.contact);
+        email=(TextView)findViewById(R.id.email);
+
         ProfileEdite=(Button) findViewById(R.id.btnprofileedit);
 
     }

@@ -35,6 +35,16 @@
     <string name="Home">Home</string>
     <string name="Stare">Stare</string>
     <string name="Room">Room</string>
+    <string name="Dashboard">Dashboard</string>
+    <string name="SelectAddType">Select Add Type</string>
+
+    <string name="EditProfiles">Edit Profile</string>
+    <string name="UpdateProfile">Update Profile</string>
+    <string name="UpdatePassword">Update Password</string>
+    <string name="MyAdd">MY ADD</string>
+    <string name="Profilr">Profile</string>
+
+
     <string name="title_activity_login_user_dashboard">LoginUserDashboard</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

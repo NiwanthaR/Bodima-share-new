@@ -19,11 +19,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".AddHome"></activity>
         <activity
             android:name=".LoginUserDashboard"
-            android:label="@string/title_activity_login_user_dashboard"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".SelectPostType" />
+            android:label="@string/Dashboard"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SelectPostType"
+            android:label="@string/SelectAddType" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -54,7 +57,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Profile_Edite_Dash" />
+        <activity
+            android:name=".Profile_Edite_Dash"
+            android:label="@string/EditProfiles" />
         <activity android:name=".Testin_Dash" />
 
         <meta-data
@@ -65,7 +70,9 @@
             android:name=".Map_Dash"
             android:label="@string/title_activity_map__dash" />
         <activity android:name=".Post_Dash" />
-        <activity android:name=".Profile_Dash" />
+        <activity
+            android:name=".Profile_Dash"
+            android:label="@string/Profilr" />
         <activity android:name=".Registration_Dash" />
         <activity android:name=".Forget_Dash" />
         <activity android:name=".Login_Dash" />

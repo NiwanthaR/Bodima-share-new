@@ -5,4 +5,6 @@
     <color name="colorWarning">#FF0000</color>
     <color name="hint">#808080</color>
     <color name="black">#000</color>
+    <color name="profile">#616161</color>
+    <color name="white">#fff</color>
 </resources>

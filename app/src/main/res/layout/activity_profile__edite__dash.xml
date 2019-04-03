@@ -1,102 +1,247 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile_Edite_Dash">
+    android:orientation="vertical"
+    tools:context=".Registration_Dash">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="117dp"
-        android:layout_height="113dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.121"
-        app:srcCompat="@mipmap/ic_launcher_round" />
 
-    <EditText
-        android:id="@+id/edite_name"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Name"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.092" />
 
-    <EditText
-        android:id="@+id/edite_email"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edite_name"
-        app:layout_constraintVertical_bias="0.074" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
-    <EditText
-        android:id="@+id/edite_nic"
-        android:layout_width="250dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:hint="NIC"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edite_email"
-        app:layout_constraintVertical_bias="0.098" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
 
-    <Button
-        android:id="@+id/btn_edite_save"
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edite_nic"
-        app:layout_constraintVertical_bias="0.21" />
-</android.support.constraint.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etfname"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundtextfeild2"
+                    android:drawablePadding="20dp"
+                    android:hint="@string/txtfirstname"
+                    android:inputType="text"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp" />
+                <EditText
+                    android:id="@+id/etlname"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundtextfeild2"
+                    android:drawablePadding="20dp"
+                    android:hint="@string/txtlastname"
+                    android:inputType="text"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etCity"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundtextfeild2"
+                android:drawablePadding="20dp"
+                android:hint="@string/txCity"
+                android:inputType="text"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="12dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etnic"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/roundtextfeild2"
+                    android:drawablePadding="20dp"
+                    android:hint="@string/txtnic"
+                    android:inputType="text"
+                    android:paddingBottom="12dp"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp" />
+
+                <EditText
+                    android:id="@+id/txtdob"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/roundtextfeild2"
+                    android:clickable="true"
+                    android:drawablePadding="20dp"
+                    android:focusable="false"
+                    android:hint="@string/txtdob"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp" />
+
+
+            </LinearLayout>
+
+
+
+
+            <EditText
+                android:id="@+id/etContactNum"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundtextfeild2"
+                android:drawablePadding="20dp"
+                android:hint="@string/txtcontact"
+                android:inputType="number"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="12dp" />
+
+            <EditText
+                android:id="@+id/etemail"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundtextfeild2"
+                android:drawablePadding="20dp"
+                android:hint="@string/txtemail"
+                android:inputType="textEmailAddress"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="12dp" />
+
+
+            <Button
+                android:id="@+id/btnsubmit2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundbtn2"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/UpdateProfile"
+                android:textColor="#fff"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp" />
+
+
+            <EditText
+                android:id="@+id/etpassword"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundtextfeild2"
+                android:drawablePadding="20dp"
+                android:hint="@string/txtpassword2"
+                android:inputType="textPassword"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="12dp" />
+
+            <EditText
+                android:id="@+id/etrepassword"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/roundtextfeild2"
+                android:drawablePadding="20dp"
+                android:hint="@string/txtreenterpassword"
+                android:inputType="textPassword"
+                android:paddingBottom="12dp"
+                android:paddingLeft="20dp"
+                android:paddingTop="12dp" />
+
+            <Button
+                android:id="@+id/btnsubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/roundbtn2"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/UpdatePassword"
+                android:textColor="#fff"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp" />
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+</LinearLayout>

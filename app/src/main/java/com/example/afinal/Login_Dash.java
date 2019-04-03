@@ -63,7 +63,7 @@ public class Login_Dash extends AppCompatActivity {
         if(user != null)
         {
             finish();
-            startActivity(new Intent(Login_Dash.this,MainActivity.class));
+            startActivity(new Intent(Login_Dash.this,LoginUserDashboard.class));
         }
 
         //Click login button
@@ -130,7 +130,7 @@ public class Login_Dash extends AppCompatActivity {
         if (emailflag){
             finish();
             Toast.makeText(Login_Dash.this,"Login Successfully",Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(Login_Dash.this,MainActivity.class));
+            startActivity(new Intent(Login_Dash.this,LoginUserDashboard.class));
         }
         else{
             Toast.makeText(Login_Dash.this,"Login Failed",Toast.LENGTH_SHORT).show();

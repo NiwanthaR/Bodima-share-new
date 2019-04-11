@@ -50,7 +50,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/etfname"
+                    android:id="@+id/et_edite_fname"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="25dp"
                     android:layout_marginRight="5dp"
@@ -65,7 +65,7 @@
                     android:paddingLeft="20dp"
                     android:paddingTop="12dp" />
                 <EditText
-                    android:id="@+id/etlname"
+                    android:id="@+id/et_edite_lname"
                     android:layout_marginTop="5dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="25dp"
@@ -83,7 +83,7 @@
             </LinearLayout>
 
             <EditText
-                android:id="@+id/etCity"
+                android:id="@+id/et_edite_City"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -104,7 +104,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/etnic"
+                    android:id="@+id/et_edite_nic"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="25dp"
                     android:layout_marginRight="5dp"
@@ -144,7 +144,7 @@
 
 
             <EditText
-                android:id="@+id/etContactNum"
+                android:id="@+id/et_edite_ContactNum"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -159,7 +159,7 @@
                 android:paddingTop="12dp" />
 
             <EditText
-                android:id="@+id/etemail"
+                android:id="@+id/et_edite_email"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -189,7 +189,7 @@
 
 
             <EditText
-                android:id="@+id/etpassword"
+                android:id="@+id/et_edite_password"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
@@ -204,7 +204,7 @@
                 android:paddingTop="12dp" />
 
             <EditText
-                android:id="@+id/etrepassword"
+                android:id="@+id/et_edite_repassword"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"

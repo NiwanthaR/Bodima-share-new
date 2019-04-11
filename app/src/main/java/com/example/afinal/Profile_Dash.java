@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Profile_Dash extends AppCompatActivity {
 
     private ImageView Profilepic;
-    private TextView name ,city , nic,dob,contact,email;
+    private TextView Name ,City , Nic, Dob, Contact, Email;
     private Button ProfileEdite;
 
     private FirebaseAuth firebaseAuth;
@@ -32,55 +32,55 @@ public class Profile_Dash extends AppCompatActivity {
         setContentView(R.layout.activity_profile__dash);
 
         //load
-//        uiload();
+        uiload();
         //set fire base
-//        firebaseAuth = FirebaseAuth.getInstance();
-//        firebaseDatabase = FirebaseDatabase.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
 
         //get uid
-//        DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
 
-//        databaseReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-//                UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-//                name.setText(userProfile.getFirstName()+" "+userProfile.getLastName());
-//                city.setText(userProfile.getCity());
-//               nic.setText(userProfile.getNIC());
-//                dob.setText(userProfile.getDOB());
-//                contact.setText(userProfile.getContact());
-//                email.setText(userProfile.getEmail());
+               UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
+               Name.setText(userProfile.getUpload_Fname()+" "+userProfile.getUpload_Lname());
+               City.setText(userProfile.getUpload_City());
+               Nic.setText(userProfile.getUpload_Nic());
+               Dob.setText(userProfile.getUpload_Dob());
+               Contact.setText(userProfile.getUpload_Contact());
+               Email.setText(userProfile.getUpload_Email());
 
             }
 
 
 
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//                Toast.makeText(Profile_Dash.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
-//            }
-//        });
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(Profile_Dash.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+           }
+        });
 
-//        ProfileEdite.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(Profile_Dash.this,Profile_Edite_Dash.class));
-//            }
-//        });
-//    }
+        ProfileEdite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Profile_Dash.this,Profile_Edite_Dash.class));
+            }
+        });
+    }
 
     //assign
-//    private void uiload(){
+    private void uiload(){
 
-//        name=(TextView)findViewById(R.id.name);
-//        city=(TextView)findViewById(R.id.city);
-//        nic=(TextView)findViewById(R.id.nic);
-//        dob=(TextView)findViewById(R.id.dob);
-//        contact=(TextView)findViewById(R.id.contact);
-//        email=(TextView)findViewById(R.id.email);
-//
-//        ProfileEdite=(Button) findViewById(R.id.btnprofileedit);
+        Name=(TextView)findViewById(R.id.tv_username);
+        City=(TextView)findViewById(R.id.tv_city);
+        Nic=(TextView)findViewById(R.id.tv_nic);
+        Dob=(TextView)findViewById(R.id.tv_dob);
+        Contact=(TextView)findViewById(R.id.tv_contact);
+        Email=(TextView)findViewById(R.id.tv_email);
 
-//    }
+        ProfileEdite=(Button) findViewById(R.id.btnEditProfile);
+
+   }
 }

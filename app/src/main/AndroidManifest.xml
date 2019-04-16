@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddHome"></activity>
+        <activity android:name=".PostAdd"></activity>
+        <activity android:name=".AddHome" />
         <activity
             android:name=".LoginUserDashboard"
             android:label="@string/Dashboard"

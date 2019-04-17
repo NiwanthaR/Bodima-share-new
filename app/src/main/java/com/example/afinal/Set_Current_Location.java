@@ -1,6 +1,7 @@
 package com.example.afinal;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 
@@ -11,6 +12,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
@@ -76,6 +78,22 @@ public class Set_Current_Location extends FragmentActivity implements
             mMap.setMyLocationEnabled(true);
         }
 
+    }
+
+    public void onClick(View v)
+    {
+        if (v.getId() == R.id.btn_setLocation)
+        {
+            Toast.makeText(this ,"Latitude is "+Lat+"  Longitude is "+Lan,Toast.LENGTH_SHORT).show();
+
+//            MainActivity M = new MainActivity();
+//
+//            M.x = Lat;
+//            M.y = Lan;
+
+//            startActivity(new Intent(Map_Dadh.this,MainActivity.class));
+
+        }
     }
 
     private boolean checkLocationPermition()

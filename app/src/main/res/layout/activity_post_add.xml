@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostAdd">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Spinner
+            android:id="@+id/TypeOfRent"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawableLeft="@drawable/ic_magnifying_glass"
+            android:drawablePadding="20dp"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+
+
+        <EditText
+            android:id="@+id/txtuserftyn54ame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawableLeft="@drawable/ic_address"
+            android:drawablePadding="20dp"
+            android:hint="@string/txtAddress"
+            android:inputType="number"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/NoOfStare"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawableLeft="@drawable/ic_magnifying_glass"
+                android:drawablePadding="20dp"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
+
+            <Spinner
+                android:id="@+id/NoOfRooms"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawableLeft="@drawable/ic_magnifying_glass"
+                android:drawablePadding="20dp"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/AC"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawableLeft="@drawable/ic_magnifying_glass"
+                android:drawablePadding="20dp"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
+
+            <Spinner
+                android:id="@+id/NonAc"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawableLeft="@drawable/ic_magnifying_glass"
+                android:drawablePadding="20dp"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/NoOfBathRooms"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawableLeft="@drawable/ic_magnifying_glass"
+            android:drawablePadding="20dp"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/NonAttached"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawableLeft="@drawable/ic_magnifying_glass"
+                android:drawablePadding="20dp"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
+
+            <Spinner
+                android:id="@+id/Attached"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawableLeft="@drawable/ic_magnifying_glass"
+                android:drawablePadding="20dp"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="Kitchan"/>
+
+            <CheckBox
+                android:id="@+id/checkFemghale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/txtYes"
+                android:textColor="@color/hint" />
+
+            <CheckBox
+                android:id="@+id/checkFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/txtNo"
+                android:textColor="@color/hint" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="Garage"/>
+
+            <CheckBox
+                android:id="@+id/sdfsdfsdf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/txtYes"
+                android:textColor="@color/hint" />
+
+            <CheckBox
+                android:id="@+id/checkFedfgdmale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:buttonTint="@color/colorPrimary"
+                android:text="@string/txtNo"
+                android:textColor="@color/hint" />
+
+
+        </LinearLayout>
+
+
+        <Spinner
+            android:id="@+id/NoOfParkingSlot"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawableLeft="@drawable/ic_magnifying_glass"
+            android:drawablePadding="20dp"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="20dp"
+                android:text="Are You Hope To Supply Furnitures"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/sdfsdasdfsdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:buttonTint="@color/colorPrimary"
+                    android:text="@string/txtYes"
+                    android:textColor="@color/hint" />
+
+                <CheckBox
+                    android:id="@+id/checkasdasdFedfgdmale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:buttonTint="@color/colorPrimary"
+                    android:text="@string/txtNo"
+                    android:textColor="@color/hint" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/txtuserftysadn54ame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawablePadding="20dp"
+            android:hint="@string/txtDescription"
+            android:inputType="number"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+
+        <Spinner
+            android:id="@+id/WaterSupply"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawableLeft="@drawable/ic_magnifying_glass"
+            android:drawablePadding="20dp"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <Spinner
+            android:id="@+id/GovernmentGarbage"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawableLeft="@drawable/ic_magnifying_glass"
+            android:drawablePadding="20dp"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+
+        <Spinner
+            android:id="@+id/HaveGateandWall"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawableLeft="@drawable/ic_magnifying_glass"
+            android:drawablePadding="20dp"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <Spinner
+            android:id="@+id/YourRecomandtation"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawableLeft="@drawable/ic_magnifying_glass"
+            android:drawablePadding="20dp"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+
+        <Spinner
+            android:id="@+id/KeyMoney"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawableLeft="@drawable/ic_magnifying_glass"
+            android:drawablePadding="20dp"
+            android:inputType="text"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <EditText
+            android:id="@+id/txtuserftyndd54ame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawablePadding="20dp"
+            android:hint="@string/txtKeyFee"
+            android:inputType="number"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+        <EditText
+            android:id="@+id/txtuserftdyn54ame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/roundtextfeild3"
+            android:drawablePadding="20dp"
+            android:hint="@string/txtMounthlyFee"
+            android:inputType="number"
+            android:paddingLeft="8dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp" />
+
+
+
+
+
+        <Button
+            android:id="@+id/btnLoasdasdginz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/roundbtn2"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/btnAddHomeLocation"
+            android:textColor="#fff" />
+
+
+        <Button
+            android:id="@+id/bsdtnLoginz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbtn2"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/btnAddHomePhotos"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/bsdtnLodfsdfginz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbtn2"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="@string/btnSubmit"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

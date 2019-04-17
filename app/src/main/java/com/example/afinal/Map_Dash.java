@@ -100,12 +100,6 @@ public class Map_Dash extends FragmentActivity implements OnMapReadyCallback,
 
     }
 
-    public void onClick(View v)
-    {
-        Post_Dash p = new Post_Dash();
-        p.setLatLan(end_longitude,end_longitude);
-    }
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {

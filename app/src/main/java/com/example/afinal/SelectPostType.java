@@ -43,7 +43,7 @@ public class SelectPostType extends AppCompatActivity {
     }
 
     private void OpenAddHome() {
-        Intent intent = new Intent(this, SearchActivity.class);
+        Intent intent = new Intent(this, Post_Dash.class);
         startActivity(intent);
     }
 
@@ -53,7 +53,7 @@ public class SelectPostType extends AppCompatActivity {
     }
 
     private void OpenAddRoom() {
-        Intent intent = new Intent(this, SearchActivity.class);
+        Intent intent = new Intent(this, Set_Map_Location.class);
         startActivity(intent);
     }
 

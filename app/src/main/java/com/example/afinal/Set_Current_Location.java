@@ -86,12 +86,13 @@ public class Set_Current_Location extends FragmentActivity implements
         {
             Toast.makeText(this ,"Latitude is "+Lat+"  Longitude is "+Lan,Toast.LENGTH_SHORT).show();
 
-//            MainActivity M = new MainActivity();
-//
-//            M.x = Lat;
-//            M.y = Lan;
+              Post_Dash Post = new Post_Dash();
 
-//            startActivity(new Intent(Map_Dadh.this,MainActivity.class));
+                Post.Latitiude = Lat;
+                Post.Longitude = Lan;
+
+
+            startActivity(new Intent(Set_Current_Location.this,Post_Dash.class));
 
         }
     }

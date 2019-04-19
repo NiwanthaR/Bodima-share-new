@@ -23,7 +23,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.05" />
 
     <EditText
         android:id="@+id/etPno"
@@ -40,18 +40,18 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/etPcity"
-        app:layout_constraintHorizontal_bias="0.628"
+        app:layout_constraintHorizontal_bias="0.602"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347" />
+        app:layout_constraintVertical_bias="0.316" />
 
     <EditText
         android:id="@+id/etPcity"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginRight="56dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginRight="52dp"
         android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="City"
@@ -59,7 +59,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.347" />
+        app:layout_constraintVertical_bias="0.316" />
 
     <EditText
         android:id="@+id/etPaddress"
@@ -76,9 +76,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
+        app:layout_constraintVertical_bias="0.417" />
 
     <ImageView
         android:id="@+id/imgaddpic"
@@ -94,7 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.176"
+        app:layout_constraintVertical_bias="0.149"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
     <EditText
@@ -112,9 +113,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPaddress"
-        app:layout_constraintVertical_bias="0.05" />
+        app:layout_constraintVertical_bias="0.041" />
 
     <EditText
         android:id="@+id/etProoms"
@@ -131,10 +133,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintHorizontal_bias="0.169"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPrentfee"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.062" />
 
     <EditText
         android:id="@+id/etPbathroom"
@@ -151,18 +153,18 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintHorizontal_bias="0.328"
         app:layout_constraintStart_toEndOf="@+id/etProoms"
         app:layout_constraintTop_toBottomOf="@+id/etPrentfee"
-        app:layout_constraintVertical_bias="0.008" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <Button
         android:id="@+id/btngoMap"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:text="Get Location"
         app:layout_constraintEnd_toStartOf="@+id/btnAddPost"
         app:layout_constraintTop_toBottomOf="@+id/etPdiscription" />
@@ -171,9 +173,9 @@
         android:id="@+id/btnAddPost"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginRight="52dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
         android:text="Post"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPdiscription" />
@@ -196,6 +198,6 @@
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPbathroom"
-        app:layout_constraintVertical_bias="0.083" />
+        app:layout_constraintVertical_bias="0.075" />
 
 </android.support.constraint.ConstraintLayout>

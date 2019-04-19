@@ -53,7 +53,7 @@ public class SelectPostType extends AppCompatActivity {
     }
 
     private void OpenAddRoom() {
-        Intent intent = new Intent(this, Set_Current_Location.class);
+        Intent intent = new Intent(this, Post_Dash.class);
         startActivity(intent);
     }
 

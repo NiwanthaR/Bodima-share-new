@@ -23,7 +23,7 @@ public class Post_Dash extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
 
     String uno,ucity,uaddress,urentfee,uroom,ubathroom,udiscription;
-    String Latitiude , Longitude;
+    public static String Latitiude , Longitude;
 
 
     @Override
@@ -40,14 +40,14 @@ public class Post_Dash extends AppCompatActivity {
             public void onClick(View v) {
                 sendPostdetails();
                 Toast.makeText(Post_Dash.this,"Post Uploaded",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Post_Dash.this,MainActivity.class));
+                startActivity(new Intent(Post_Dash.this,Post_Dash.class));
             }
         });
 
         Get_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Post_Dash.this,Map_Dash.class));
+                startActivity(new Intent(Post_Dash.this,Set_Current_Location.class));
             }
         });
 

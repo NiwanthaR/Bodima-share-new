@@ -34,8 +34,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".CallbackMap_Dash"
+            android:label="@string/title_activity_callback_map__dash"></activity>
+        <activity
             android:name=".Set_Current_Location"
-            android:label="@string/title_activity_set__current__location"></activity>
+            android:label="@string/title_activity_set__current__location" />
         <activity android:name=".AddHome" />
         <activity
             android:name=".LoginUserDashboard"

@@ -64,6 +64,7 @@
     <string name="title_activity_map__dash__final">Map</string>
     <string name="title_activity_set__map__location">Map</string>
     <string name="title_activity_set__current__location">Map</string>
+    <string name="title_activity_callback_map__dash">Map</string>
 
 
 </resources>

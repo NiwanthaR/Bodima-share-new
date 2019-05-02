@@ -92,9 +92,9 @@ public class Post_Dash extends AppCompatActivity {
 
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference mypost = firebaseDatabase.getReference(firebaseAuth.getUid());
+        DatabaseReference mypost = firebaseDatabase.getReference().child("User_Add");
 
         UserAddPost userAddPost = new UserAddPost(uno,ucity,uaddress,urentfee,ubathroom,ubathroom,udiscription,Latitiude,Longitude);
-        mypost.setValue(userAddPost);
+        mypost.child("User_Add").setValue(userAddPost);
     }
 }

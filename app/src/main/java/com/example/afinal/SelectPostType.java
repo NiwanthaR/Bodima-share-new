@@ -43,7 +43,7 @@ public class SelectPostType extends AppCompatActivity {
     }
 
     private void OpenAddHome() {
-        Intent intent = new Intent(this, SearchActivity.class);
+        Intent intent = new Intent(this, PostAdd.class);
         startActivity(intent);
     }
 

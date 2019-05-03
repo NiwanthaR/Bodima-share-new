@@ -42,7 +42,6 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="25dp"
             android:background="@drawable/roundtextfeild3"
-            android:drawableLeft="@drawable/ic_address"
             android:drawablePadding="20dp"
             android:hint="@string/txtAddress"
             android:inputType="number"
@@ -464,20 +463,31 @@
             android:text="@string/btnAddHomeLocation"
             android:textColor="#fff" />
 
-
-        <Button
-            android:id="@+id/bsdtnLoginz"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="30dp"
             android:layout_marginTop="5dp"
             android:layout_marginRight="30dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/roundbtn2"
-            android:foreground="?android:attr/selectableItemBackground"
-            android:text="@string/btnAddHomePhotos"
-            android:textColor="#fff" />
+            />
+
+
+        <!--<Button-->
+            <!--android:id="@+id/bsdtnLoginz"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginLeft="30dp"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:layout_marginRight="30dp"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:background="@drawable/roundbtn2"-->
+            <!--android:foreground="?android:attr/selectableItemBackground"-->
+            <!--android:text="@string/btnAddHomePhotos"-->
+            <!--android:textColor="#fff" />-->
 
         <Button
             android:id="@+id/bsdtnLodfsdfginz"

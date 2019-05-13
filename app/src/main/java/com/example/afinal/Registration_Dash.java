@@ -257,7 +257,7 @@ public class Registration_Dash extends AppCompatActivity {
     public void sendUserData(){
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myref = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+        DatabaseReference myref = firebaseDatabase.getReference().child("Profile").child(firebaseAuth.getUid());
         UserProfile userProfile = new UserProfile(fname,lname,city,nic,dob,contact,email);
         System.out.println(fname);
         myref.setValue(userProfile);

@@ -43,17 +43,17 @@ public class SelectPostType extends AppCompatActivity {
     }
 
     private void OpenAddHome() {
-        Intent intent = new Intent(this, PostAdd.class);
+        Intent intent = new Intent(this, Post_Add_Home_Dash.class);
         startActivity(intent);
     }
 
     private void OpenAddStare() {
-        Intent intent = new Intent(this, SearchActivity.class);
+        Intent intent = new Intent(this, CallbackMap_Dash.class);
         startActivity(intent);
     }
 
     private void OpenAddRoom() {
-        Intent intent = new Intent(this, SearchActivity.class);
+        Intent intent = new Intent(this, Post_Dash.class);
         startActivity(intent);
     }
 

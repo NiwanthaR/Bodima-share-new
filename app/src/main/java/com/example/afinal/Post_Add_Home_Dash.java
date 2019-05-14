@@ -1,6 +1,7 @@
 package com.example.afinal;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +13,11 @@ import android.widget.Toast;
 
 import com.google.android.gms.maps.GoogleMap;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Post_Add_Home_Dash extends AppCompatActivity {
 
@@ -25,7 +29,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
 
-    private String h_address , h_city , h_province , h_stair , h_rooms , h_bathroom , h_kitchen , h_garage , h_parking , h_water , h_garbage , h_gateandwall , h_keymoney , h_keymoneyfee , h_mounthlyfee , h_renttime , h_discription ;
+    private String h_address , h_city , h_province , h_stair , h_rooms , h_bathroom , h_kitchen , h_garage , h_parking , h_water , h_garbage , h_gateandwall , h_keymoney , h_keymoneyfee , h_mounthlyfee , h_renttime , h_discription , h_ownername ;
     public static  String Home_latitude , Home_longitude;
 
     @Override
@@ -35,13 +39,33 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+        //------------------------------------------------------------------------------------------------------------
+        FirebaseDatabase firebaseDatabase= FirebaseDatabase.getInstance();
+        DatabaseReference databaseReference = firebaseDatabase.getReference().child("Profile").child(firebaseAuth.getUid());
+
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
+                h_ownername =(userProfile.getUpload_Fname()+" "+userProfile.getUpload_Lname());
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(Post_Add_Home_Dash.this,databaseError.getCode(),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        //-------------------------------------------------------------------------------------------------------------
+
         uiload();
 
         go_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(Post_Add_Home_Dash.this,"Lat is "+Home_latitude+"Lan is "+Home_longitude,Toast.LENGTH_SHORT).show();
+                Toast.makeText(Post_Add_Home_Dash.this,"Name is "+h_ownername,Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -211,10 +235,13 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
     private void sendhousedata()
     {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference homepost = firebaseDatabase.getReference().child("User_Home_Post").child(firebaseAuth.getUid());
+        String child = h_ownername;
+        DatabaseReference homepost = firebaseDatabase.getReference().child("User_Home_Post").child(child);
 
         User_add_Homepost user_add_homepost = new User_add_Homepost(h_address,h_city,h_province,h_stair,h_rooms,h_bathroom,h_kitchen,h_garage,h_parking,h_water,h_garbage,h_gateandwall,h_keymoney,h_keymoneyfee,h_mounthlyfee,h_renttime,h_discription,Home_latitude,Home_longitude);
         homepost.setValue(user_add_homepost);
     }
+
+
 
 }

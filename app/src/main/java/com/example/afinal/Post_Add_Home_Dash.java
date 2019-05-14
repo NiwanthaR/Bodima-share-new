@@ -26,6 +26,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
 
     private String h_address , h_city , h_province , h_stair , h_rooms , h_bathroom , h_kitchen , h_garage , h_parking , h_water , h_garbage , h_gateandwall , h_keymoney , h_keymoneyfee , h_mounthlyfee , h_renttime , h_discription ;
+    public static  String Home_latitude , Home_longitude;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,23 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
         uiload();
+
+        go_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(Post_Add_Home_Dash.this,"Lat is "+Home_latitude+"Lan is "+Home_longitude,Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        get_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Post_Add_Home_Dash.this,Set_Current_Location.class));
+            }
+        });
+
 
         submit_data.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -195,7 +213,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference homepost = firebaseDatabase.getReference().child("User_Home_Post").child(firebaseAuth.getUid());
 
-        User_add_Homepost user_add_homepost = new User_add_Homepost(h_address,h_city,h_province,h_stair,h_rooms,h_bathroom,h_kitchen,h_garage,h_parking,h_water,h_garbage,h_gateandwall,h_keymoney,h_keymoneyfee,h_mounthlyfee,h_renttime,h_discription);
+        User_add_Homepost user_add_homepost = new User_add_Homepost(h_address,h_city,h_province,h_stair,h_rooms,h_bathroom,h_kitchen,h_garage,h_parking,h_water,h_garbage,h_gateandwall,h_keymoney,h_keymoneyfee,h_mounthlyfee,h_renttime,h_discription,Home_latitude,Home_longitude);
         homepost.setValue(user_add_homepost);
     }
 

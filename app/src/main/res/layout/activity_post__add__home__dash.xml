@@ -30,7 +30,7 @@
         app:layout_constraintVertical_bias="0.039" />
 
             <ImageView
-                android:id="@+id/myimg"
+                android:id="@+id/myadd_img"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 app:srcCompat="@mipmap/ic_launcher_round"
@@ -79,18 +79,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.445" />
 
-    <EditText
-        android:id="@+id/et_h_stare"
-        android:layout_marginTop="40px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Stair"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.646" />
+            <EditText
+                android:id="@+id/et_h_stare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40px"
+                android:ems="10"
+                android:hint="Stair"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintVertical_bias="0.646" />
 
     <EditText
         android:id="@+id/et_h_rooms"

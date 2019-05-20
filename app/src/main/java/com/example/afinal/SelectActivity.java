@@ -34,7 +34,7 @@ public class SelectActivity extends AppCompatActivity {
     }
 
     private void openSearch() {
-        Intent intent = new Intent(this, PostAdd.class);
+        Intent intent = new Intent(this, Post_Add_Stair_Dash.class);
         startActivity(intent);
     }
 

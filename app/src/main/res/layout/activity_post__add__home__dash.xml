@@ -18,415 +18,609 @@
 
     <TextView
         android:id="@+id/tvhome"
-        android:layout_marginTop="40px"
+        android:layout_marginTop="50px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add House Details"
         android:textAlignment="center"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.039" />
+        android:fontFamily="@font/montserrat_bold"
+        />
 
             <ImageView
                 android:id="@+id/myadd_img"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                app:srcCompat="@mipmap/ic_launcher_round"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="100dp"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/logoblue"
+                android:layout_marginBottom="20dp"
                 />
+
 
     <EditText
         android:id="@+id/et_h_address"
-        android:layout_marginTop="40px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Adderss"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.175" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/roundtextfeild3"
+        android:drawablePadding="20dp"
+        android:hint="@string/txtAddress"
+        android:inputType="text"
+        android:paddingLeft="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
 
     <EditText
         android:id="@+id/et_h_city"
-        android:layout_marginTop="40px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="City"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.319" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/roundtextfeild3"
+        android:drawablePadding="20dp"
+        android:hint="@string/txCity"
+        android:inputType="text"
+        android:paddingLeft="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
 
     <EditText
         android:id="@+id/et_h_province"
-        android:layout_marginTop="40px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/roundtextfeild3"
+        android:drawablePadding="20dp"
         android:hint="Province"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.445" />
+        android:inputType="text"
+        android:paddingLeft="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
 
             <EditText
                 android:id="@+id/et_h_stare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40px"
-                android:ems="10"
-                android:hint="Stair"
-                android:inputType="textPersonName"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintVertical_bias="0.646" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawablePadding="20dp"
+                android:hint="Stare"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
 
     <EditText
         android:id="@+id/et_h_rooms"
-        android:layout_marginTop="40px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Rooms"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.666" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/roundtextfeild3"
+        android:drawablePadding="20dp"
+        android:hint="rooms"
+        android:inputType="text"
+        android:paddingLeft="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
 
     <EditText
         android:id="@+id/et_h_bathroom"
-        android:layout_marginTop="40px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Bathroom"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.868" />
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/roundtextfeild3"
+        android:drawablePadding="20dp"
+        android:hint="barthroom"
+        android:inputType="text"
+        android:paddingLeft="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
 
-    <TextView
-        android:id="@+id/tvdetails01"
-        android:layout_marginTop="40px"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kitchen"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioGroup
-                    android:id="@+id/radioSex"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/radioyes"
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_male"
+                        android:paddingRight="20dp"
+                        android:text="Kitchan"/>
+
+                    <RadioGroup
+                        android:id="@+id/radioSex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/checkFemghale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/txtYes"
+                        android:textColor="@color/hint"
                         android:checked="true"/>
 
                     <RadioButton
-                        android:id="@+id/radioFemale"
+                        android:id="@+id/checkFemale"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_female" />
-                </RadioGroup>
+                        android:layout_marginRight="15dp"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/txtNo"
+                        android:textColor="@color/hint" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tvdetails02"
-                android:layout_marginTop="40px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Garage"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.089"
-                app:layout_constraintStart_toStartOf="parent"
-                />
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioGroup
-                    android:id="@+id/radiogarage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/radiopark_yes"
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_male"
-                        android:checked="true"/>
+                        android:paddingRight="20dp"
+                        android:text="Garage"/>
 
-                    <RadioButton
-                        android:id="@+id/radiopark_no"
+                    <RadioGroup
+                        android:id="@+id/radiogarage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_female" />
-                </RadioGroup>
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radiopark_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/txtYes"
+                            android:textColor="@color/hint"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/radiopark_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/txtNo"
+                            android:textColor="@color/hint" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
             </LinearLayout>
+
+
+
+
 
 
             <EditText
                 android:id="@+id/et_h_parking"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40px"
-                android:ems="10"
-                android:hint="Parkin"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="99dp"
-                tools:layout_editor_absoluteY="699dp" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawablePadding="20dp"
+                android:hint="parking"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
 
-            <TextView
-                android:id="@+id/tvdetails03"
-                android:layout_marginTop="40px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Water Supply"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.089"
-                app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioGroup
-                    android:id="@+id/radiowater"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/radiopark_well"
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_well"
-                        android:checked="true"/>
+                        android:paddingRight="40dp"
+                        android:text="Water Supply"
+                        android:paddingBottom="5dp"/>
 
-                    <RadioButton
-                        android:id="@+id/radiopark_tapline"
+                    <RadioGroup
+                        android:id="@+id/radiowater"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_tapline" />
+                        android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/radiopark_both"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/radio_both" />
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/radiopark_well"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_well"
+                            android:textColor="@color/hint"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/radiopark_tapline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_tapline"
+                            android:textColor="@color/hint" />
+
+                        <RadioButton
+                            android:id="@+id/radiopark_both"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_both"
+                            android:textColor="@color/hint" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
             </LinearLayout>
 
 
-            <TextView
-                android:id="@+id/tvdetails04"
-                android:layout_marginTop="40px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Garbage Collection System"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.089"
-                app:layout_constraintStart_toStartOf="parent"
-                />
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioGroup
-                    android:id="@+id/radiogarbage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/radiogarbage_yes"
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_male"
-                        android:checked="true"/>
+                        android:paddingRight="40dp"
+                        android:text="Garbage Collection System"
+                        android:paddingBottom="5dp"/>
 
-                    <RadioButton
-                        android:id="@+id/radiogarbage_no"
+                    <RadioGroup
+                        android:id="@+id/radiogarbage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_female" />
-                </RadioGroup>
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radiogarbage_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_male"
+                            android:textColor="@color/hint"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/radiogarbage_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_female"
+                            android:textColor="@color/hint" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
             </LinearLayout>
 
 
-            <TextView
-                android:id="@+id/tvdetails05"
-                android:layout_marginTop="40px"
+
+
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Gate and Wall"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.089"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="40dp"
+                        android:text="Gate and Wall"
+                        android:paddingBottom="5dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radiogateandwall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radiogate_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_male"
+                            android:textColor="@color/hint"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/radiogate_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_female"
+                            android:textColor="@color/hint" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <RadioGroup
-                    android:id="@+id/radiogateandwall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
 
-                    <RadioButton
-                        android:id="@+id/radiogate_yes"
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_male"
-                        android:checked="true"/>
+                        android:paddingRight="40dp"
+                        android:text="Key Money"
+                        android:paddingBottom="5dp"/>
 
-                    <RadioButton
-                        android:id="@+id/radiogate_no"
+                    <RadioGroup
+                        android:id="@+id/radiokeymoney"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/radio_female" />
-                </RadioGroup>
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radiokey_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_male"
+                            android:textColor="@color/hint"
+                            android:checked="true"/>
+
+                        <RadioButton
+                            android:id="@+id/radiokey_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_female"
+                            android:textColor="@color/hint" />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
             </LinearLayout>
 
 
-            <TextView
-                android:id="@+id/tvdetails06"
-                android:layout_marginTop="40px"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Key Money"
-                android:textSize="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.089"
-                app:layout_constraintStart_toStartOf="parent" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <RadioGroup
-                    android:id="@+id/radiokeymoney"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
 
-                    <RadioButton
-                        android:id="@+id/radiokey_yes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/radio_male"
-                        android:checked="true"/>
 
-                    <RadioButton
-                        android:id="@+id/radiokey_no"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/radio_female" />
-                </RadioGroup>
-            </LinearLayout>
+
+
+
+
+
+
+
+
 
 
             <EditText
                 android:id="@+id/et_h_Keymoneyfee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40px"
-                android:ems="10"
-                android:hint="Key Money Fee"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="99dp"
-                tools:layout_editor_absoluteY="699dp" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawablePadding="20dp"
+                android:hint="key Money Feild"
+                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
 
             <EditText
                 android:id="@+id/et_h_Mounthfee"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40px"
-                android:ems="10"
-                android:hint="Mounthly Fee"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="99dp"
-                tools:layout_editor_absoluteY="699dp" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawablePadding="20dp"
+                android:hint="monthly fee"
+                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
 
             <EditText
                 android:id="@+id/et_h_rentperiod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40px"
-                android:ems="10"
-                android:hint="Rent Period"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="99dp"
-                tools:layout_editor_absoluteY="699dp" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawablePadding="20dp"
+                android:hint="Years"
+                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
 
             <EditText
                 android:id="@+id/et_h_discription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40px"
-                android:ems="10"
-                android:hint="Discription"
-                android:inputType="textPersonName"
-                tools:layout_editor_absoluteX="99dp"
-                tools:layout_editor_absoluteY="699dp" />
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/roundtextfeild3"
+                android:drawablePadding="20dp"
+                android:hint="Description"
+                android:inputType="text"
+                android:paddingLeft="8dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp" />
 
             <Button
                 android:id="@+id/btn_locations"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Set My Location"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/roundbtn2"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/btnAddHomeLocation"
+                android:textColor="#fff"/>
 
             <Button
                 android:id="@+id/btn_submitshome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/roundbtn2"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/btnAddHomeLocation"
+                android:textColor="#fff"/>
 
             <Button
                 android:id="@+id/btn_backtomenu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Back"
-                android:layout_marginBottom="30dp"/>
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/roundbtn2"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/btnAddHomeLocation"
+                android:textColor="#fff"
+                />
 
         </LinearLayout>
     </ScrollView>

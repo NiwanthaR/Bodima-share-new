@@ -67,12 +67,14 @@
     <string name="title_activity_callback_map__dash">Map</string>
 
 
-//-------------------------------water supply-------------------------------------------------------
+    //-------------------------------water
+    supply-------------------------------------------------------
     <string name="radio_well">Well(Using Moter)</string>
     <string name="radio_tapline">Water Board(Tapline)</string>
     <string name="radio_both">Have these two types</string>
 
-//-------------------------------Kitchen Garage------------------------------------------------------------
+    //-------------------------------Kitchen
+    Garage------------------------------------------------------------
     <string name="radio_male">Yes</string>
     <string name="radio_female">No</string>
 

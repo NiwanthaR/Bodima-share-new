@@ -4,6 +4,9 @@
 
     <string name="btnSearch">SEARCH</string>
     <string name="btnAddHomeLocation">Add Home Lacation</string>
+    <string name="btnAddHomeSubmit">Submit Your Home Add</string>
+    <string name="btnAddHomegoback">Go Back</string>
+
     <string name="btnAddHomePhotos">Add Home Photos</string>
     <string name="searchAdd">SEARCH ADD</string>
     <string name="btnSubmit">Submit</string>
@@ -67,16 +70,27 @@
     <string name="title_activity_callback_map__dash">Map</string>
 
 
-    //-------------------------------water
-    supply-------------------------------------------------------
+    //-------------------------------water supply---------------------------------------------------
     <string name="radio_well">Well(Using Moter)</string>
     <string name="radio_tapline">Water Board(Tapline)</string>
     <string name="radio_both">Have these two types</string>
 
-    //-------------------------------Kitchen
-    Garage------------------------------------------------------------
+    //-------------------------------Kitchen Garage-------------------------------------------------
     <string name="radio_male">Yes</string>
     <string name="radio_female">No</string>
+
+    //--------------------------------Bathroom------------------------------------------------------
+    <string name="radio_attach">Atached</string>
+    <string name="radio_nonattach">Non-Atached</string>
+
+    //--------------------------------Room Condition------------------------------------------------
+    <string name="radio_ac">A/C</string>
+    <string name="radio_nonac">Non A/C</string>
+
+    //--------------------------------Stair case Type-----------------------------------------------
+    <string name="radio_stairin">In Side</string>
+    <string name="radio_stairout">Out Side</string>
+    <string name="radio_stairno">No Stair(Basement)</string>
 
 
 </resources>

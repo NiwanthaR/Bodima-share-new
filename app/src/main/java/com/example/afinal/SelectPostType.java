@@ -48,7 +48,7 @@ public class SelectPostType extends AppCompatActivity {
     }
 
     private void OpenAddStare() {
-        Intent intent = new Intent(this, CallbackMap_Dash.class);
+        Intent intent = new Intent(this, Post_Add_Stair_Dash.class);
         startActivity(intent);
     }
 

@@ -91,7 +91,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/et_s_stairno"
+                    android:id="@+id/et_s_nofloor"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="52dp"
@@ -518,7 +518,7 @@
                 android:background="@drawable/roundtextfeild3"
                 android:drawablePadding="20dp"
                 android:hint="@string/txtDescription"
-                android:inputType="number"
+                android:inputType="text"
                 android:paddingLeft="8dp"
                 android:paddingTop="12dp"
                 android:paddingBottom="12dp" />

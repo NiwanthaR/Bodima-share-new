@@ -35,20 +35,21 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
 
     private ImageView advertice_image;
     private Button get_location , go_back , submit_data;
-    private EditText U_address , U_city , U_province , U_stair , U_rooms , U_bathroom , U_parking , U_keymoneyfee , U_mounthfee , U_renttime , U_discription ;
+    private EditText U_address ,U_street , U_city ,  U_stair , U_rooms , U_bathroom , U_parking , U_keymoneyfee , U_mounthfee , U_renttime , U_discription ;
 
     private RadioGroup radioSexGroup , radiogarageGroup , radiowaterGroup , radiogarbageGroup , radiogateandwallGroup , radiokeymoneyGroup ;
     private RadioButton r_SexButton , r_garageButton , r_waterButton , r_garbageButton , r_gateandwallButton , r_keymoneyButton;
 
     private FirebaseAuth firebaseAuth;
 
-    private String h_address , h_city , h_province , h_stair , h_rooms , h_bathroom , h_kitchen , h_garage , h_parking , h_water , h_garbage , h_gateandwall , h_keymoney , h_keymoneyfee , h_mounthlyfee , h_renttime , h_discription , h_owner_nic ;
+    private String h_address , h_street , h_city , h_stair , h_rooms , h_bathroom , h_kitchen , h_garage , h_parking , h_water , h_garbage , h_gateandwall , h_keymoney , h_keymoneyfee , h_mounthlyfee , h_renttime , h_discription , h_owner_nic ;
     public static  String Home_latitude , Home_longitude;
 
     private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
     private static int PICK_IMAGE = 123;
     Uri imagepath ;
+
 
 
     @Override
@@ -174,7 +175,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
 
         U_address =(EditText) findViewById(R.id.et_h_address);
         U_city =(EditText) findViewById(R.id.et_h_city);
-        U_province =(EditText) findViewById(R.id.et_h_province);
+        U_street =(EditText) findViewById(R.id.et_h_province);
         U_stair =(EditText) findViewById(R.id.et_h_stare);
         U_rooms =(EditText) findViewById(R.id.et_h_rooms);
         U_bathroom =(EditText) findViewById(R.id.et_h_bathroom);
@@ -271,7 +272,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
 
         h_address = U_address.getText().toString();
         h_city = U_city.getText().toString();
-        h_province = U_province.getText().toString();
+        h_street = U_street.getText().toString();
         h_stair = U_stair.getText().toString();
         h_rooms =U_rooms.getText().toString();
         h_bathroom = U_bathroom.getText().toString();
@@ -282,7 +283,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
         h_discription = U_discription.getText().toString();
 
 
-        if (h_address.isEmpty() || h_city.isEmpty() || h_province.isEmpty() || h_stair.isEmpty() || h_rooms.isEmpty() || h_bathroom.isEmpty() || h_parking.isEmpty() || h_keymoneyfee.isEmpty() || h_mounthlyfee.isEmpty())
+        if (h_address.isEmpty() || h_city.isEmpty() || h_street.isEmpty() || h_stair.isEmpty() || h_rooms.isEmpty() || h_bathroom.isEmpty() || h_parking.isEmpty() || h_keymoneyfee.isEmpty() || h_mounthlyfee.isEmpty())
         {
             Toast.makeText(Post_Add_Home_Dash.this,"Some Fields Empty",Toast.LENGTH_SHORT).show();
             result = false;
@@ -301,7 +302,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
         String child = h_owner_nic;
         DatabaseReference homepost = firebaseDatabase.getReference().child("User_Home_Post").child(child);
 
-        User_add_Homepost user_add_homepost = new User_add_Homepost(h_address,h_city,h_province,h_stair,h_rooms,h_bathroom,h_kitchen,h_garage,h_parking,h_water,h_garbage,h_gateandwall,h_keymoney,h_keymoneyfee,h_mounthlyfee,h_renttime,h_discription,Home_latitude,Home_longitude);
+        User_add_Homepost user_add_homepost = new User_add_Homepost(h_address,h_street,h_city,h_stair,h_rooms,h_bathroom,h_kitchen,h_garage,h_parking,h_water,h_garbage,h_gateandwall,h_keymoney,h_keymoneyfee,h_mounthlyfee,h_renttime,h_discription,Home_latitude,Home_longitude);
         homepost.setValue(user_add_homepost);
 
         //----------------------------------------------------image part---------------------------------------------------
@@ -324,7 +325,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
     {
         U_address.setText("");
         U_city.setText("");
-        U_province.setText("");
+        U_street.setText("");
         U_stair.setText("");
         U_rooms.setText("");
         U_bathroom.setText("");

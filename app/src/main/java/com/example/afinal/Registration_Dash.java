@@ -2,7 +2,11 @@ package com.example.afinal;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,18 +16,25 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
+import java.io.IOException;
 import java.util.Calendar;
 
 public class Registration_Dash extends AppCompatActivity {
@@ -40,6 +51,8 @@ public class Registration_Dash extends AppCompatActivity {
     private EditText Repassword;
     private Button Submit;
 
+    private ImageView Profile_pic;
+
 
 
     EditText testview;
@@ -55,6 +68,34 @@ public class Registration_Dash extends AppCompatActivity {
     private Validetion validetion;
     //firebase
     private FirebaseAuth firebaseAuth;
+
+
+    private FirebaseStorage firebaseStorage;
+    private StorageReference storageReference;
+    private static int PICK_IMAGE = 123;
+    Uri imagepath ;
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+
+        if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null)
+        {
+            imagepath = data.getData();
+            try {
+                Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imagepath);
+                Profile_pic.setImageBitmap(bitmap);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+
+
 
 
     @Override
@@ -74,6 +115,10 @@ public class Registration_Dash extends AppCompatActivity {
          final Validetion validate = new Validetion();
          //firebase
         firebaseAuth=FirebaseAuth.getInstance();
+
+        //----------------------------------------------------part of load image---------------------------------------------------------
+        firebaseStorage = FirebaseStorage.getInstance();
+        storageReference = firebaseStorage.getReference();
 
 
         try {
@@ -146,6 +191,18 @@ public class Registration_Dash extends AppCompatActivity {
             }
         });
 
+
+        Profile_pic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent();
+                intent.setType("image/*");
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                startActivityForResult(Intent.createChooser(intent,"Select Image"),PICK_IMAGE);
+            }
+        });
+
     }
 
     private void uiload()  {
@@ -163,6 +220,8 @@ public class Registration_Dash extends AppCompatActivity {
 
         txtErrorDisplay=(TextView)findViewById(R.id.txtErrorDisplay);
         gobacklogin=(TextView)findViewById(R.id.tvgobackloginreg);
+
+        Profile_pic=(ImageView)findViewById(R.id.profile_img);
     }
 
     public boolean validatedetails(){
@@ -262,6 +321,20 @@ public class Registration_Dash extends AppCompatActivity {
         System.out.println(fname);
         myref.setValue(userProfile);
         System.out.println(lname);
+
+        StorageReference imageRefarance = storageReference.child("Profile Picture").child(firebaseAuth.getUid());
+        UploadTask uploadTask = imageRefarance.putFile(imagepath);
+        uploadTask.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(Registration_Dash.this,"Image upload Failed",Toast.LENGTH_SHORT).show();
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                Toast.makeText(Registration_Dash.this,"Image upload successfully",Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 

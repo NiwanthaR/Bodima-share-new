@@ -4,7 +4,7 @@ public class User_add_Homepost {
 
     public String home_address;
     public String home_city;
-    public String home_province;
+    public String home_street;
     public String home_stair;
     public String home_room;
     public String home_bathroom;
@@ -25,7 +25,7 @@ public class User_add_Homepost {
     public User_add_Homepost(String home_address, String home_city, String home_province, String home_stair, String home_room, String home_bathroom, String home_kitchen, String home_grage, String home_parkin, String home_water, String home_garbage, String home_gateandwall, String home_keymoney, String home_keymoneyfee, String home_mounthlyfee, String home_rentperiod, String home_discription, String home_latitude, String home_longitude) {
         this.home_address = home_address;
         this.home_city = home_city;
-        this.home_province = home_province;
+        this.home_street = home_province;
         this.home_stair = home_stair;
         this.home_room = home_room;
         this.home_bathroom = home_bathroom;
@@ -61,11 +61,11 @@ public class User_add_Homepost {
     }
 
     public String getHome_province() {
-        return home_province;
+        return home_street;
     }
 
     public void setHome_province(String home_province) {
-        this.home_province = home_province;
+        this.home_street = home_province;
     }
 
     public String getHome_stair() {

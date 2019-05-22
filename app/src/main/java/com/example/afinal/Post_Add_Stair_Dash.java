@@ -139,6 +139,14 @@ public class Post_Add_Stair_Dash extends AppCompatActivity {
             }
         });
 
+        //---------------------------------------back_button-----------------------------------------
+        goback_menu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Post_Add_Stair_Dash.this,SelectPostType.class));
+            }
+        });
+
 
         //----------------------------------------Image part-----------------------------------------
         Stair_image.setOnClickListener(new View.OnClickListener() {

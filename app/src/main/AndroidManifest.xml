@@ -19,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Post_Add_Stair_Dash"></activity>
+        <activity android:name=".Post_Add_Room_Dash"></activity>
+        <activity android:name=".Post_Add_Stair_Dash" />
         <activity android:name=".Post_Add_Home_Dash" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

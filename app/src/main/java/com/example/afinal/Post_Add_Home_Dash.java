@@ -42,7 +42,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
 
-    private String h_address , h_city , h_province , h_stair , h_rooms , h_bathroom , h_kitchen , h_garage , h_parking , h_water , h_garbage , h_gateandwall , h_keymoney , h_keymoneyfee , h_mounthlyfee , h_renttime , h_discription , h_ownername ;
+    private String h_address , h_city , h_province , h_stair , h_rooms , h_bathroom , h_kitchen , h_garage , h_parking , h_water , h_garbage , h_gateandwall , h_keymoney , h_keymoneyfee , h_mounthlyfee , h_renttime , h_discription , h_owner_nic ;
     public static  String Home_latitude , Home_longitude;
 
     private FirebaseStorage firebaseStorage;
@@ -92,7 +92,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 UserProfile userProfile = dataSnapshot.getValue(UserProfile.class);
-                h_ownername =(userProfile.getUpload_Fname()+" "+userProfile.getUpload_Lname());
+                h_owner_nic =(userProfile.getUpload_Nic());
             }
 
             @Override
@@ -108,16 +108,16 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
         //---------------------------------------------------------------------------------------------------------------------
 
 
-
+        //--------------------------------------------goback button-----------------------------------------
         go_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(Post_Add_Home_Dash.this,"Name is "+h_ownername,Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(Post_Add_Home_Dash.this,SelectPostType.class));
             }
         });
 
-
+        //--------------------------------------------location button-----------------------------------------
         get_location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -298,14 +298,14 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
     private void sendhousedata()
     {
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        String child = h_ownername;
+        String child = h_owner_nic;
         DatabaseReference homepost = firebaseDatabase.getReference().child("User_Home_Post").child(child);
 
         User_add_Homepost user_add_homepost = new User_add_Homepost(h_address,h_city,h_province,h_stair,h_rooms,h_bathroom,h_kitchen,h_garage,h_parking,h_water,h_garbage,h_gateandwall,h_keymoney,h_keymoneyfee,h_mounthlyfee,h_renttime,h_discription,Home_latitude,Home_longitude);
         homepost.setValue(user_add_homepost);
 
         //----------------------------------------------------image part---------------------------------------------------
-        StorageReference imageRefarance = storageReference.child("Home advertise").child(h_ownername);
+        StorageReference imageRefarance = storageReference.child("Home advertise").child(h_owner_nic);
         UploadTask uploadTask = imageRefarance.putFile(imagepath);
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override

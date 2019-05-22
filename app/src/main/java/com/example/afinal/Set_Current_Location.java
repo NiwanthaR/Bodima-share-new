@@ -100,6 +100,11 @@ public class Set_Current_Location extends FragmentActivity implements
             Stair.Stair_latitude = Lat;
             Stair.Stair_longitude = Lan;
 
+            Post_Add_Room_Dash Room = new Post_Add_Room_Dash();
+
+            Room.Room_latitude = Lat;
+            Room.Room_longitude = Lan;
+
 
             //startActivity(new Intent(Set_Current_Location.this,Post_Dash.class));
 

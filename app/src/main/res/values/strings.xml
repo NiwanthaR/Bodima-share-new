@@ -80,8 +80,8 @@
     <string name="radio_female">No</string>
 
     //--------------------------------Bathroom------------------------------------------------------
-    <string name="radio_attach">Atached</string>
-    <string name="radio_nonattach">Non-Atached</string>
+    <string name="radio_attach">Attached</string>
+    <string name="radio_nonattach">Non-Attached</string>
 
     //--------------------------------Room Condition------------------------------------------------
     <string name="radio_ac">A/C</string>
@@ -92,5 +92,17 @@
     <string name="radio_stairout">Out Side</string>
     <string name="radio_stairno">No Stair(Basement)</string>
 
+
+    //---------------------------------Room---------------------------------------------------------
+
+    //-------------------------------Room type------------------------------------------------------
+    <string name="radio_roomtypeinside">Inside House</string>
+    <string name="radio_roomtypeseparate">Separate</string>
+    <string name="radio_roomtypeattached">Attached</string>
+
+    //-------------------------------Room Member------------------------------------------------------
+    <string name="radio_room_one_member">One person</string>
+    <string name="radio_room_more_thanone_member">More than One</string>
+    <string name="radio_room_can_descuss_member">It can Arrange</string>
 
 </resources>

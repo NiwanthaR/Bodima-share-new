@@ -35,7 +35,7 @@ public class Profile_Edite_Dash extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
 
         //get uid
-        final DatabaseReference databaseReference = firebaseDatabase.getReference(firebaseAuth.getUid()).child("Profile");
+        final DatabaseReference databaseReference = firebaseDatabase.getReference().child("Profile").child(firebaseAuth.getUid());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

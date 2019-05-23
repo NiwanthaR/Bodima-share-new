@@ -40,7 +40,8 @@ dependencies {
 
     //picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
-    
+    //support-library
+    implementation 'com.android.support:exifinterface:28.0.0'
 
 
 }

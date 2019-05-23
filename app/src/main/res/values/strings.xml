@@ -105,4 +105,8 @@
     <string name="radio_room_more_thanone_member">More than One</string>
     <string name="radio_room_can_descuss_member">It can Arrange</string>
 
+    //-------------------------------Register sex-------------------------------------------------
+    <string name="radio_gendermale">Male</string>
+    <string name="radio_genderfemale">Female</string>
+
 </resources>

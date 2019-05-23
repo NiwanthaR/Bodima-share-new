@@ -175,50 +175,51 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginTop="10dp">
-
-
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="25dp"
+                    android:gravity="center_horizontal"
                     android:orientation="horizontal">
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/txtgender"
-                        android:textSize="20dp"
-                        app:fontFamily="@font/montserrat" />
+                        android:paddingRight="20dp"
+                        android:text="Gender"/>
 
-
-                    <CheckBox
-                        android:id="@+id/checkMale"
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginRight="15dp"
+                    <RadioGroup
+                        android:id="@+id/radio_registration_gender"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/txtmale"
-                        android:textColor="@color/hint"
-                        android:buttonTint="@color/colorPrimary"
-                        android:checked="true"/>
+                        android:orientation="horizontal">
 
-                    <CheckBox
-                        android:id="@+id/checkFemale"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/txtfemale"
-                        android:textColor="@color/hint"
-                        android:buttonTint="@color/colorPrimary"/>
+                        <RadioButton
+                            android:id="@+id/radio_sexmale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_gendermale"
+                            android:textColor="@color/hint"
+                            android:checked="true"/>
 
+                        <RadioButton
+                            android:id="@+id/radio_sexfemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="@string/radio_genderfemale"
+                            android:textColor="@color/hint" />
+                    </RadioGroup>
 
                 </LinearLayout>
-
-
-
 
             </LinearLayout>
 

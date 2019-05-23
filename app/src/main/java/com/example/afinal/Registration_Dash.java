@@ -17,6 +17,8 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -53,6 +55,10 @@ public class Registration_Dash extends AppCompatActivity {
 
     private ImageView Profile_pic;
 
+    private RadioGroup Radio_Gender;
+    private RadioButton radio_select_gender;
+
+
 
 
     EditText testview;
@@ -62,7 +68,7 @@ public class Registration_Dash extends AppCompatActivity {
     private TextView txtErrorDisplay;
     private TextView gobacklogin;
     //validate
-    String  fname,lname,city,nic,dob,contact,email,password,repasswod;
+    String  fname,lname,city,nic,dob,contact,email,password,repasswod,gender;
 
     //function
     private Validetion validetion;
@@ -179,7 +185,7 @@ public class Registration_Dash extends AppCompatActivity {
                                 sendEmailVerification();
                             }
                             else {
-                                Toast.makeText(Registration_Dash.this,"Registration Failed!",Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Registration_Dash.this,"Registration Failed! submit",Toast.LENGTH_SHORT).show();
                                 System.out.println("Registration Failed!");
                             }
 
@@ -222,12 +228,19 @@ public class Registration_Dash extends AppCompatActivity {
         gobacklogin=(TextView)findViewById(R.id.tvgobackloginreg);
 
         Profile_pic=(ImageView)findViewById(R.id.profile_img);
+
+        Radio_Gender=(RadioGroup)findViewById(R.id.radio_registration_gender);
+
     }
+
 
     public boolean validatedetails(){
 
         final Validetion validate = new Validetion();
         boolean result = false;
+
+        Read_Gender();
+
 
         fname = Fname.getText().toString();
         lname = Lname.getText().toString();
@@ -317,10 +330,12 @@ public class Registration_Dash extends AppCompatActivity {
 
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
         DatabaseReference myref = firebaseDatabase.getReference().child("Profile").child(firebaseAuth.getUid());
-        UserProfile userProfile = new UserProfile(fname,lname,city,nic,dob,contact,email);
+        UserProfile userProfile = new UserProfile(fname,lname,city,nic,dob,contact,email,gender);
         System.out.println(fname);
         myref.setValue(userProfile);
         System.out.println(lname);
+
+
 
         StorageReference imageRefarance = storageReference.child("Profile Picture").child(firebaseAuth.getUid());
         UploadTask uploadTask = imageRefarance.putFile(imagepath);
@@ -336,6 +351,19 @@ public class Registration_Dash extends AppCompatActivity {
             }
         });
 
+    }
+
+
+    public void Read_Gender() {
+
+        // get selected radio button from radioGroup
+        int selectedId = Radio_Gender.getCheckedRadioButtonId();
+
+        // find the radiobutton by returned id
+        radio_select_gender = (RadioButton) findViewById(selectedId);
+
+        gender = String.valueOf(radio_select_gender.getText());
+        //Toast.makeText(Post_Add_Home_Dash.this,h_kitchen,Toast.LENGTH_SHORT).show();
     }
 
 }

@@ -9,14 +9,14 @@ public class UserProfile {
     public String upload_Dob;
     public String upload_Contact;
     public String upload_Email;
+    public String upload_Gender;
 
     public UserProfile()
     {
 
     }
 
-
-    public UserProfile(String upload_Fname, String upload_Lname, String upload_City, String upload_Nic, String upload_Dob, String upload_Contact, String upload_Email) {
+    public UserProfile(String upload_Fname, String upload_Lname, String upload_City, String upload_Nic, String upload_Dob, String upload_Contact, String upload_Email, String upload_Gender) {
         this.upload_Fname = upload_Fname;
         this.upload_Lname = upload_Lname;
         this.upload_City = upload_City;
@@ -24,6 +24,7 @@ public class UserProfile {
         this.upload_Dob = upload_Dob;
         this.upload_Contact = upload_Contact;
         this.upload_Email = upload_Email;
+        this.upload_Gender = upload_Gender;
     }
 
     public UserProfile(String upload_Fname, String upload_Lname, String upload_City, String upload_Nic, String upload_Dob, String upload_Contact) {

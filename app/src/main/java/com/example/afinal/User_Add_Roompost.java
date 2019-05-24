@@ -20,9 +20,9 @@ public class User_Add_Roompost {
     public String room_description;
     public String room_latitude;
     public String room_longitude;
+    public String room_image_url;
 
-
-    public User_Add_Roompost(String room_nomber, String room_street, String room_city, String room_type, String room_condition, String room_member, String room_bathroomtype, String room_ferniture, String room_ferniture_dis, String room_parking, String room_near_bus_root, String room_keymoney, String room_keymoneyfee, String room_mounthly_fee, String room_years, String room_description, String room_latitude, String room_longitude) {
+    public User_Add_Roompost(String room_nomber, String room_street, String room_city, String room_type, String room_condition, String room_member, String room_bathroomtype, String room_ferniture, String room_ferniture_dis, String room_parking, String room_near_bus_root, String room_keymoney, String room_keymoneyfee, String room_mounthly_fee, String room_years, String room_description, String room_latitude, String room_longitude, String room_image_url) {
         this.room_nomber = room_nomber;
         this.room_street = room_street;
         this.room_city = room_city;
@@ -41,6 +41,6 @@ public class User_Add_Roompost {
         this.room_description = room_description;
         this.room_latitude = room_latitude;
         this.room_longitude = room_longitude;
+        this.room_image_url = room_image_url;
     }
-
 }

@@ -29,6 +29,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 public class Post_Add_Room_Dash extends AppCompatActivity {
 
@@ -40,7 +41,7 @@ public class Post_Add_Room_Dash extends AppCompatActivity {
 
     private RadioButton R_roomtype,R_roomcondition,R_roommember,R_bathroom,R_ferniture,R_parkig,R_keymonry;
 
-    private String Rm_nomber,Rm_street,Rm_city,Rm_roomtype,Rm_roomcondition,Rm_member,Rm_bathroom,Rm_ferniture,Rm_ferniturediss,Rm_parking,Rm_near_distance,Rm_keymoney,Rm_keymoneyfee,Rm_mounthlyfee,Rm_period,Rm_disscription,r_owner_Nic;
+    private String Rm_nomber,Rm_street,Rm_city,Rm_roomtype,Rm_roomcondition,Rm_member,Rm_bathroom,Rm_ferniture,Rm_ferniturediss,Rm_parking,Rm_near_distance,Rm_keymoney,Rm_keymoneyfee,Rm_mounthlyfee,Rm_period,Rm_disscription,r_owner_Nic,image_url;
     public static  String Room_latitude , Room_longitude;
 
     private FirebaseStorage firebaseStorage;
@@ -57,6 +58,34 @@ public class Post_Add_Room_Dash extends AppCompatActivity {
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null)
         {
             imagepath = data.getData();
+
+            //-----------------------------------------------new------------------------------------
+
+            storageReference = firebaseStorage.getReference();
+            final StorageReference imageRefarance = storageReference.child("Room advertise").child(r_owner_Nic);
+
+            imageRefarance.putFile(imagepath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                    imageRefarance.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+
+                            //HashMap<String,String> hashMap = new HashMap<>();
+                            //hashMap.put(image_url, String.valueOf(uri));
+
+                            image_url = String.valueOf(uri);
+
+                            //Toast.makeText(Post_Add_Room_Dash.this,"ok...!!"+image_url,Toast.LENGTH_LONG).show();
+
+                        }
+                    });
+                }
+            });
+
+
+            //--------------------------------------------------------------------------------------
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imagepath);
                 Room_Image.setImageBitmap(bitmap);
@@ -166,7 +195,7 @@ public class Post_Add_Room_Dash extends AppCompatActivity {
         String child = r_owner_Nic;
         DatabaseReference roompost = firebaseDatabase.getReference().child("User_Room_Post").child(child);
 
-        User_Add_Roompost user_add_roompost = new User_Add_Roompost(Rm_nomber,Rm_street,Rm_city,Rm_roomtype,Rm_roomcondition,Rm_member,Rm_bathroom,Rm_ferniture,Rm_ferniturediss,Rm_parking,Rm_near_distance,Rm_keymoney,Rm_keymoneyfee,Rm_mounthlyfee,Rm_period,Rm_disscription,Room_latitude,Room_longitude);
+        User_Add_Roompost user_add_roompost = new User_Add_Roompost(Rm_nomber,Rm_street,Rm_city,Rm_roomtype,Rm_roomcondition,Rm_member,Rm_bathroom,Rm_ferniture,Rm_ferniturediss,Rm_parking,Rm_near_distance,Rm_keymoney,Rm_keymoneyfee,Rm_mounthlyfee,Rm_period,Rm_disscription,Room_latitude,Room_longitude,image_url);
         roompost.setValue(user_add_roompost);
 
 

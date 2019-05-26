@@ -18,7 +18,7 @@ public class SearchTypes extends AppCompatActivity {
 
         UI_LOAD();
 
-        home.setOnClickListener(new View.OnClickListener() {
+        room.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(SearchTypes.this,SearchActivity.class);
@@ -27,7 +27,7 @@ public class SearchTypes extends AppCompatActivity {
             }
         });
 
-        room.setOnClickListener(new View.OnClickListener() {
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent it = new Intent(SearchTypes.this,SearchActivity.class);

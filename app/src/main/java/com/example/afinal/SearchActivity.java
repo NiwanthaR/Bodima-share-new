@@ -62,12 +62,17 @@ public class SearchActivity extends AppCompatActivity {
                         cardlayout2.setOrientation(1);
 
                         //text view can be editable
+                        nametxt.setTextSize(20);
+                        nametxt.setPadding(15,0,0,0);
+
+                        pricetxt.setTextSize(15);
+                        pricetxt.setPadding(15,0,0,0);
 
                         Picasso.with(SearchActivity.this).load(dps.child("room_image_url").getValue().toString()).resize(300,250).into(image);
 
                         cardView.setRadius(52);
-                        nametxt.setText(dps.child("room_description").getValue().toString());
-                        pricetxt.setText(dps.child("room_mounthly_fee").getValue().toString());
+                        nametxt.setText("City - "+dps.child("room_city").getValue().toString());
+                        pricetxt.setText("Rs - "+dps.child("room_mounthly_fee").getValue().toString());
                         final String nic = ""; //dps.child("room_description").getValue().toString();
 
                         cardlayout.addView(image);

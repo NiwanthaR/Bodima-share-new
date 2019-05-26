@@ -79,7 +79,7 @@ public class Profile_Dash extends AppCompatActivity {
         storageReference.child("Profile Picture").child(firebaseAuth.getUid()).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-                Picasso.get().load(uri).fit().centerCrop().into(Profilepic);
+                Picasso.with(getBaseContext()).load(uri).fit().centerCrop().into(Profilepic);
             }
         });
 

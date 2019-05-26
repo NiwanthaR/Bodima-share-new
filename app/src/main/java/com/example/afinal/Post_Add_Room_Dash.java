@@ -145,12 +145,11 @@ public class Post_Add_Room_Dash extends AppCompatActivity {
                 Read_RoomParking();
                 Read_RoomKeymoney();
 
-                if (check_isfull() == true)
-                {
+                if (check_isfull() == true) {
                     sendroomdetails();
-                    Toast.makeText(Post_Add_Room_Dash.this,"Your Post added Succesfull",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Post_Add_Room_Dash.this, "Your Post added Succesfull", Toast.LENGTH_SHORT).show();
                     Clear_all();
-                    startActivity(new Intent(Post_Add_Room_Dash.this,LoginUserDashboard.class));
+                    startActivity(new Intent(Post_Add_Room_Dash.this, LoginUserDashboard.class));
                 }
 
             }
@@ -195,7 +194,7 @@ public class Post_Add_Room_Dash extends AppCompatActivity {
         String child = r_owner_Nic;
         DatabaseReference roompost = firebaseDatabase.getReference().child("User_Room_Post").child(child);
 
-        User_Add_Roompost user_add_roompost = new User_Add_Roompost(Rm_nomber,Rm_street,Rm_city,Rm_roomtype,Rm_roomcondition,Rm_member,Rm_bathroom,Rm_ferniture,Rm_ferniturediss,Rm_parking,Rm_near_distance,Rm_keymoney,Rm_keymoneyfee,Rm_mounthlyfee,Rm_period,Rm_disscription,Room_latitude,Room_longitude,image_url);
+        User_Add_Roompost user_add_roompost = new User_Add_Roompost(Rm_nomber,Rm_street,Rm_city,Rm_roomtype,Rm_roomcondition,Rm_member,Rm_bathroom,Rm_ferniture,Rm_ferniturediss,Rm_parking,Rm_near_distance,Rm_keymoney,Rm_keymoneyfee,Rm_mounthlyfee,Rm_period,Rm_disscription,Room_latitude,Room_longitude,r_owner_Nic,image_url);
         roompost.setValue(user_add_roompost);
 
 

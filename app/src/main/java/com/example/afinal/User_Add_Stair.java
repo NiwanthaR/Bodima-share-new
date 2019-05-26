@@ -2,33 +2,35 @@ package com.example.afinal;
 
 public class User_Add_Stair {
 
-    String stair_number;
-    String stair_street;
-    String stair_city;
-    String stair_stairnumber;
-    String stair_numberofrooms;
-    String stair_roomcondition;
-    String stair_numberofbathroom;
-    String stair_bathroomtypr;
-    String stair_kitchen;
-    String stair_garage;
-    String stair_parkinslot;
-    String stair_staircasenumber;
-    String stair_staircasetype;
-    String stair_ferniture;
-    String stair_ferniturediss;
-    String stair_water;
-    String stair_garbage;
-    String stair_gatewall;
-    String stair_keymoney;
-    String stair_keymoneyfee;
-    String stair_mounthlyfee;
-    String stair_rentperiod;
-    String stair_discription;
-    String stair_latitude;
-    String stair_longitude;
+    private String stair_number;
+    private String stair_street;
+    private String stair_city;
+    private String stair_stairnumber;
+    private String stair_numberofrooms;
+    private String stair_roomcondition;
+    private String stair_numberofbathroom;
+    private String stair_bathroomtypr;
+    private String stair_kitchen;
+    private String stair_garage;
+    private String stair_parkinslot;
+    private String stair_staircasenumber;
+    private String stair_staircasetype;
+    private String stair_ferniture;
+    private String stair_ferniturediss;
+    private String stair_water;
+    private String stair_garbage;
+    private String stair_gatewall;
+    private String stair_keymoney;
+    private String stair_keymoneyfee;
+    private String stair_mounthlyfee;
+    private String stair_rentperiod;
+    private String stair_discription;
+    private String stair_latitude;
+    private String stair_longitude;
+    private String stair_owner;
+    private String stair_image_url;
 
-    public User_Add_Stair(String stair_number, String stair_street, String stair_city, String stair_stairnumber, String stair_numberofrooms, String stair_roomcondition, String stair_numberofbathroom, String stair_bathroomtypr, String stair_kitchen, String stair_garage, String stair_parkinslot, String stair_staircasenumber, String stair_staircasetype, String stair_ferniture, String stair_ferniturediss, String stair_water, String stair_garbage, String stair_gatewall, String stair_keymoney, String stair_keymoneyfee, String stair_mounthlyfee, String stair_rentperiod, String stair_discription, String stair_latitude, String stair_longitude) {
+    public User_Add_Stair(String stair_number, String stair_street, String stair_city, String stair_stairnumber, String stair_numberofrooms, String stair_roomcondition, String stair_numberofbathroom, String stair_bathroomtypr, String stair_kitchen, String stair_garage, String stair_parkinslot, String stair_staircasenumber, String stair_staircasetype, String stair_ferniture, String stair_ferniturediss, String stair_water, String stair_garbage, String stair_gatewall, String stair_keymoney, String stair_keymoneyfee, String stair_mounthlyfee, String stair_rentperiod, String stair_discription, String stair_latitude, String stair_longitude, String stair_owner, String stair_image_url) {
         this.stair_number = stair_number;
         this.stair_street = stair_street;
         this.stair_city = stair_city;
@@ -54,9 +56,9 @@ public class User_Add_Stair {
         this.stair_discription = stair_discription;
         this.stair_latitude = stair_latitude;
         this.stair_longitude = stair_longitude;
+        this.stair_owner = stair_owner;
+        this.stair_image_url = stair_image_url;
     }
-
-    //-----------------------------------------getters and setters-----------------------------------
 
     public String getStair_number() {
         return stair_number;
@@ -256,5 +258,21 @@ public class User_Add_Stair {
 
     public void setStair_longitude(String stair_longitude) {
         this.stair_longitude = stair_longitude;
+    }
+
+    public String getStair_owner() {
+        return stair_owner;
+    }
+
+    public void setStair_owner(String stair_owner) {
+        this.stair_owner = stair_owner;
+    }
+
+    public String getStair_image_url() {
+        return stair_image_url;
+    }
+
+    public void setStair_image_url(String stair_image_url) {
+        this.stair_image_url = stair_image_url;
     }
 }

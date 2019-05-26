@@ -42,7 +42,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
 
-    private String h_address , h_street , h_city , h_stair , h_rooms , h_bathroom , h_kitchen , h_garage , h_parking , h_water , h_garbage , h_gateandwall , h_keymoney , h_keymoneyfee , h_mounthlyfee , h_renttime , h_discription , h_owner_nic ;
+    private String h_address , h_street , h_city , h_stair , h_rooms , h_bathroom , h_kitchen , h_garage , h_parking , h_water , h_garbage , h_gateandwall , h_keymoney , h_keymoneyfee , h_mounthlyfee , h_renttime , h_discription , h_owner_nic , image_url ;
     public static  String Home_latitude , Home_longitude;
 
     private FirebaseStorage firebaseStorage;
@@ -58,6 +58,36 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null)
         {
             imagepath = data.getData();
+
+            //-----------------------------------------------new------------------------------------
+
+            storageReference = firebaseStorage.getReference();
+            final StorageReference imageRefarance = storageReference.child("Room advertise").child(h_owner_nic);
+
+            imageRefarance.putFile(imagepath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                    imageRefarance.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+
+                            //HashMap<String,String> hashMap = new HashMap<>();
+                            //hashMap.put(image_url, String.valueOf(uri));
+
+                            image_url = String.valueOf(uri);
+
+                            //Toast.makeText(Post_Add_Room_Dash.this,"ok...!!"+image_url,Toast.LENGTH_LONG).show();
+
+                        }
+                    });
+                }
+            });
+
+
+
+
+
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imagepath);
                 advertice_image.setImageBitmap(bitmap);
@@ -302,7 +332,7 @@ public class Post_Add_Home_Dash extends AppCompatActivity {
         String child = h_owner_nic;
         DatabaseReference homepost = firebaseDatabase.getReference().child("User_Home_Post").child(child);
 
-        User_add_Homepost user_add_homepost = new User_add_Homepost(h_address,h_street,h_city,h_stair,h_rooms,h_bathroom,h_kitchen,h_garage,h_parking,h_water,h_garbage,h_gateandwall,h_keymoney,h_keymoneyfee,h_mounthlyfee,h_renttime,h_discription,Home_latitude,Home_longitude);
+        User_add_Homepost user_add_homepost = new User_add_Homepost(h_address,h_street,h_city,h_stair,h_rooms,h_bathroom,h_kitchen,h_garage,h_parking,h_water,h_garbage,h_gateandwall,h_keymoney,h_keymoneyfee,h_mounthlyfee,h_renttime,h_discription,Home_latitude,Home_longitude,h_owner_nic,image_url);
         homepost.setValue(user_add_homepost);
 
         //----------------------------------------------------image part---------------------------------------------------

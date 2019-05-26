@@ -100,7 +100,8 @@
     <string name="radio_roomtypeseparate">Separate</string>
     <string name="radio_roomtypeattached">Attached</string>
 
-    //-------------------------------Room Member------------------------------------------------------
+    //-------------------------------Room
+    Member------------------------------------------------------
     <string name="radio_room_one_member">One person</string>
     <string name="radio_room_more_thanone_member">More than One</string>
     <string name="radio_room_can_descuss_member">It can Arrange</string>

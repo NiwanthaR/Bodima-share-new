@@ -40,7 +40,7 @@ public class Post_Add_Stair_Dash extends AppCompatActivity {
 
     private RadioButton s_roombutton , s_bathroombutton , s_kitchenbutton , s_garagebutton , s_staircasebutton , s_ferniturebuton , s_waterbutton , s_garbagebutton , s_gatewallbutton , s_keymoneybutton;
 
-    private String s_nomber ,s_road ,s_city , s_floor , s_rooms, s_roomcondition , s_bathroom, s_bathroomtype, s_kitchen , s_garage, s_parkingslot , s_staircasenumber, s_staircasetype, s_fernitures, s_ferniturediss , s_water , s_garbage ,s_gatewall , s_keymoney , s_keymoneyfee , s_mounthlyfee , s_rentperiod , s_discription , s_owner_Nic;
+    private String s_nomber ,s_road ,s_city , s_floor , s_rooms, s_roomcondition , s_bathroom, s_bathroomtype, s_kitchen , s_garage, s_parkingslot , s_staircasenumber, s_staircasetype, s_fernitures, s_ferniturediss , s_water , s_garbage ,s_gatewall , s_keymoney , s_keymoneyfee , s_mounthlyfee , s_rentperiod , s_discription , s_owner_Nic,image_url;
     public static  String Stair_latitude , Stair_longitude;
 
     private FirebaseStorage firebaseStorage;
@@ -58,6 +58,36 @@ public class Post_Add_Stair_Dash extends AppCompatActivity {
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK && data.getData() != null)
         {
             imagepath = data.getData();
+
+            //-----------------------------------------------new------------------------------------
+
+            storageReference = firebaseStorage.getReference();
+            final StorageReference imageRefarance = storageReference.child("Room advertise").child(s_owner_Nic);
+
+            imageRefarance.putFile(imagepath).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                    imageRefarance.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+
+                            //HashMap<String,String> hashMap = new HashMap<>();
+                            //hashMap.put(image_url, String.valueOf(uri));
+
+                            image_url = String.valueOf(uri);
+
+                            //Toast.makeText(Post_Add_Room_Dash.this,"ok...!!"+image_url,Toast.LENGTH_LONG).show();
+
+                        }
+                    });
+                }
+            });
+
+
+
+
+
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(),imagepath);
                 Stair_image.setImageBitmap(bitmap);
@@ -201,7 +231,7 @@ public class Post_Add_Stair_Dash extends AppCompatActivity {
         String child = s_owner_Nic;
         DatabaseReference stairpost = firebaseDatabase.getReference().child("User_Stair_Post").child(child);
 
-        User_Add_Stair user_add_stair = new User_Add_Stair(s_nomber,s_road,s_city,s_floor,s_rooms,s_roomcondition,s_bathroom,s_bathroomtype,s_kitchen,s_garage,s_parkingslot,s_staircasenumber,s_staircasetype,s_fernitures,s_ferniturediss,s_water,s_garbage,s_gatewall,s_keymoney,s_keymoneyfee,s_mounthlyfee,s_rentperiod,s_discription,Stair_latitude,Stair_longitude);
+        User_Add_Stair user_add_stair = new User_Add_Stair(s_nomber,s_road,s_city,s_floor,s_rooms,s_roomcondition,s_bathroom,s_bathroomtype,s_kitchen,s_garage,s_parkingslot,s_staircasenumber,s_staircasetype,s_fernitures,s_ferniturediss,s_water,s_garbage,s_gatewall,s_keymoney,s_keymoneyfee,s_mounthlyfee,s_rentperiod,s_discription,Stair_latitude,Stair_longitude,s_owner_Nic,image_url);
         stairpost.setValue(user_add_stair);
 
 

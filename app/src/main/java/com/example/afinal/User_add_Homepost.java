@@ -21,11 +21,14 @@ public class User_add_Homepost {
     public String home_discription;
     public String home_latitude;
     public String home_longitude;
+    public String home_owner;
+    public String home_image_url;
 
-    public User_add_Homepost(String home_address, String home_city, String home_province, String home_stair, String home_room, String home_bathroom, String home_kitchen, String home_grage, String home_parkin, String home_water, String home_garbage, String home_gateandwall, String home_keymoney, String home_keymoneyfee, String home_mounthlyfee, String home_rentperiod, String home_discription, String home_latitude, String home_longitude) {
+
+    public User_add_Homepost(String home_address, String home_city, String home_street, String home_stair, String home_room, String home_bathroom, String home_kitchen, String home_grage, String home_parkin, String home_water, String home_garbage, String home_gateandwall, String home_keymoney, String home_keymoneyfee, String home_mounthlyfee, String home_rentperiod, String home_discription, String home_latitude, String home_longitude, String home_owner, String home_image_url) {
         this.home_address = home_address;
         this.home_city = home_city;
-        this.home_street = home_province;
+        this.home_street = home_street;
         this.home_stair = home_stair;
         this.home_room = home_room;
         this.home_bathroom = home_bathroom;
@@ -42,6 +45,8 @@ public class User_add_Homepost {
         this.home_discription = home_discription;
         this.home_latitude = home_latitude;
         this.home_longitude = home_longitude;
+        this.home_owner = home_owner;
+        this.home_image_url = home_image_url;
     }
 
     public String getHome_address() {
@@ -60,12 +65,12 @@ public class User_add_Homepost {
         this.home_city = home_city;
     }
 
-    public String getHome_province() {
+    public String getHome_street() {
         return home_street;
     }
 
-    public void setHome_province(String home_province) {
-        this.home_street = home_province;
+    public void setHome_street(String home_street) {
+        this.home_street = home_street;
     }
 
     public String getHome_stair() {
@@ -194,5 +199,21 @@ public class User_add_Homepost {
 
     public void setHome_longitude(String home_longitude) {
         this.home_longitude = home_longitude;
+    }
+
+    public String getHome_owner() {
+        return home_owner;
+    }
+
+    public void setHome_owner(String home_owner) {
+        this.home_owner = home_owner;
+    }
+
+    public String getHome_image_url() {
+        return home_image_url;
+    }
+
+    public void setHome_image_url(String home_image_url) {
+        this.home_image_url = home_image_url;
     }
 }

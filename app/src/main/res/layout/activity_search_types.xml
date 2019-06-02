@@ -1,40 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".SearchTypes">
 
-    <Button
-        android:id="@+id/homeBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
-        android:text="Home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/stairBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="63dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:text="Stair"
-        app:layout_constraintEnd_toEndOf="@+id/homeBtn"
-        app:layout_constraintTop_toBottomOf="@+id/homeBtn" />
+        <Button
+            android:id="@+id/homeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbtn2"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Home"
+            android:textColor="#fff" />
 
-    <Button
-        android:id="@+id/roomBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="78dp"
-        android:text="Room"
-        app:layout_constraintStart_toStartOf="@+id/stairBtn"
-        app:layout_constraintTop_toBottomOf="@+id/stairBtn" />
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/stairBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbtn2"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Stair"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/roomBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/roundbtn2"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Room"
+            android:textColor="#fff" />
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

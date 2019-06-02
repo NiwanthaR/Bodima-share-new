@@ -83,34 +83,35 @@
 
                 <EditText
                     android:id="@+id/etfname"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginRight="5dp"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
                     android:background="@drawable/roundtextfeild2"
                     android:drawablePadding="20dp"
                     android:hint="@string/txtfirstname"
                     android:inputType="text"
-                    android:paddingBottom="12dp"
                     android:paddingLeft="20dp"
-                    android:paddingTop="12dp" />
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp" />
+
                 <EditText
                     android:id="@+id/etlname"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="25dp"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_weight="1"
                     android:background="@drawable/roundtextfeild2"
                     android:drawablePadding="20dp"
                     android:hint="@string/txtlastname"
                     android:inputType="text"
-                    android:paddingBottom="12dp"
                     android:paddingLeft="20dp"
-                    android:paddingTop="12dp" />
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp" />
 
             </LinearLayout>
 
@@ -305,6 +306,16 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp">
 
+                <TextView
+                    android:id="@+id/txtErrorDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorWarning"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:layout_marginRight="30dp"
+                    />
+
                     <Button
                         android:id="@+id/tvgobackloginreg"
                         android:gravity="left|center"
@@ -316,15 +327,15 @@
 
         </LinearLayout>
 
-            <TextView
-                android:id="@+id/txtErrorDisplay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorWarning"
-                android:layout_marginLeft="30dp"
-                android:gravity="center"
-                android:layout_marginRight="30dp"
-                />
+            <!--<TextView-->
+                <!--android:id="@+id/txtErrorDisplay2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="@color/colorWarning"-->
+                <!--android:layout_marginLeft="30dp"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_marginRight="30dp"-->
+                <!--/>-->
 
 
         </LinearLayout>

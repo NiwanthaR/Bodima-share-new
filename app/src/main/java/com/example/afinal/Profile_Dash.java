@@ -28,8 +28,11 @@ public class Profile_Dash extends AppCompatActivity {
     private TextView Name ,City , Nic, Dob, Contact, Email;
     private Button ProfileEdite;
 
+    //uid
     private FirebaseAuth firebaseAuth;
+    //data
     private FirebaseDatabase firebaseDatabase;
+    //image
     private FirebaseStorage firebaseStorage;
 
     @Override

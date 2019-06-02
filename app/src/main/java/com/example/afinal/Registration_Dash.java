@@ -83,6 +83,8 @@ public class Registration_Dash extends AppCompatActivity {
 
 
 
+//Load image view
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 

@@ -62,7 +62,7 @@ class Validetion {
     }
 
 
-    public static boolean iscontac(final String contact)
+    public static boolean iscontact(final String contact)
     {
         String StringTosearch = contact;
 
